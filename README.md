@@ -70,7 +70,8 @@ Macros de texto:
 - `\freq{146.520}` imprime 146,520 MHz e `\freqrange{144}{148}` imprime
   144 a 148 MHz.
 - `\indicativo{PY1XXX}` imprime um indicativo de chamada em monoespaçado.
-- `\destaque{termo}` destaca um termo em verde, sem efeito de overlay.
+- `\alert{termo}` destaca um termo em verde e negrito (o `\alert` do Beamer,
+  ajustado pelo tema).
 - `\foto{arquivo}{legenda}` põe uma foto na largura da coluna com a legenda
   embaixo. Aceita opções do `\includegraphics` (`\foto[height=4cm]{...}{...}`);
   com `{}` no lugar da legenda, sai só a foto.
@@ -90,7 +91,7 @@ quando usados como fundo em projetores.
 | `cerjBlue` | `#0008FF` | azul do emblema, links |
 | `cerjRoyal` | `#2433C8` | blocos de exemplo |
 | `cerjGreen` | `#3CEB2E` | barra de progresso, subtítulo da capa |
-| `cerjGreenDark` | `#2A9A22` | marcadores, `\alert`, `\destaque` |
+| `cerjGreenDark` | `#2A9A22` | marcadores, `\alert` |
 | `cerjYellow` | `#F4FB95` | fundo da caixa `atencao` |
 | `cerjInk` | `#1D2238` | texto |
 
