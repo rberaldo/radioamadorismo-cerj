@@ -122,41 +122,56 @@
 }
 
 % ---------------------------------------------------------------------------
-% Página de seção: fundo navy, "Parte N", título, barra verde, logo
+% Página de seção: fundo navy; "Parte N", título e barra verde de progresso
+% centralizados no slide, com o logo à esquerda do texto (fora da centralização).
 % ---------------------------------------------------------------------------
 \newcommand{\cerjsectionlabel}{Parte}
+\newcommand{\cerjsectionlogoheight}{1.84cm}
+\newcommand{\cerjsectionmaxwidth}{0.58\textwidth} % títulos maiores quebram linha
+
+\newsavebox{\cerj@secbox}
+\newlength{\cerj@secwidth}
 
 \setbeamertemplate{section page}{%
+  % Largura do texto = a do maior entre "Parte N", título e subtítulo,
+  % limitada a \cerjsectionmaxwidth; assim o bloco de texto fica centralizado.
+  \sbox{\cerj@secbox}{\usebeamerfont{section title}\insertsectionhead}%
+  \setlength{\cerj@secwidth}{\wd\cerj@secbox}%
+  \sbox{\cerj@secbox}{\usebeamerfont{subsection title}%
+    \cerjsectionlabel~\insertsectionnumber}%
+  \ifdim\wd\cerj@secbox>\cerj@secwidth \setlength{\cerj@secwidth}{\wd\cerj@secbox}\fi
+  \ifx\insertsubsectionhead\@empty\else
+    \sbox{\cerj@secbox}{\usebeamerfont{subsection title}\insertsubsectionhead}%
+    \ifdim\wd\cerj@secbox>\cerj@secwidth \setlength{\cerj@secwidth}{\wd\cerj@secbox}\fi
+  \fi
+  \ifdim\cerj@secwidth>\cerjsectionmaxwidth \setlength{\cerj@secwidth}{\cerjsectionmaxwidth}\fi
   \centering
-  \begin{minipage}{24em}
+  \sbox{\cerj@secbox}{\cerjlogo[height=\cerjsectionlogoheight]}%
+  % \llap: o logo não ocupa largura, então só o texto conta na centralização
+  \leavevmode\llap{\parbox[c]{\wd\cerj@secbox}{\usebox{\cerj@secbox}}\hspace{1.4em}}%
+  \begin{minipage}[c]{\cerj@secwidth}
     \raggedright
     {\usebeamercolor[fg]{subsection title}\usebeamerfont{subsection title}%
      \cerjsectionlabel~\insertsectionnumber\par}
     \vspace{0.3em}
     {\usebeamercolor[fg]{section title}\usebeamerfont{section title}%
      \insertsectionhead\\[-1ex]}
-    \usebeamertemplate*{progress bar in section page}
+    \usebeamertemplate*{progress bar in section page}% largura = \textwidth da minipage
     \par
     \ifx\insertsubsectionhead\@empty\else%
       \usebeamercolor[fg]{subsection title}%
       \usebeamerfont{subsection title}%
       \insertsubsectionhead
     \fi
-  \end{minipage}
+  \end{minipage}%
   \par
-  \vspace{\baselineskip}
 }
 
 \AtBeginSection[]{%
   \begingroup
     \setbeamercolor{background canvas}{bg=cerjNavy}%
     \setbeamercolor{normal text}{fg=white, bg=cerjNavy}%
-    \frame[plain,noframenumbering,t]{%
-      \hfill\cerjlogo[height=1.1cm]\par
-      \vfill
-      \sectionpage
-      \vfill
-    }%
+    \frame[plain,noframenumbering,c]{\sectionpage}%
   \endgroup
 }
 
