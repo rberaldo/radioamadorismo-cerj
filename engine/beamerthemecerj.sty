@@ -1,0 +1,179 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+%% beamerthemecerj.sty
+%% Tema CERJ construído sobre o metropolis (mtheme).
+%% Carregue com \usetheme{cerj} (engine/ precisa estar no TEXINPUTS ou em \input@path).
+%%
+%% Cores do logotipo (medidas no PNG oficial) e derivadas:
+%%   cerjBlue      #0008FF  azul do logo (texto, contorno, montanha principal)
+%%   cerjGreen     #3CEB2E  verde do logo (vegetação)
+%%   cerjYellow    #F4FB95  amarelo-claro do logo (realce)
+%%   cerjNavy      #131A66  azul-marinho derivado, para fundos (título, seções, barra)
+%%   cerjGreenDark #2A9A22  verde derivado, para texto/realces sobre fundo claro
+%%   cerjRoyal     #2433C8  azul do logo suavizado, para preenchimentos médios
+%%   cerjInk       #1D2238  cor do texto corrido
+%%   cerjPaper     #FAFAFA  fundo dos slides
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemecerj}[2026/11/07 v0.1 Tema CERJ sobre metropolis]
+
+\RequirePackage{etoolbox}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+
+% ---------------------------------------------------------------------------
+% Base: metropolis
+% ---------------------------------------------------------------------------
+\usetheme[
+  progressbar=frametitle,   % barra de progresso sob o título do slide
+  numbering=fraction,       % "3 / 20" no rodapé
+  block=fill,               % blocos com fundo
+  sectionpage=none,         % desenhamos a nossa própria página de seção abaixo
+  subsectionpage=none,
+  titleformat=regular,
+  background=light,
+]{metropolis}
+
+% ---------------------------------------------------------------------------
+% Paleta
+% ---------------------------------------------------------------------------
+\definecolor{cerjBlue}{HTML}{0008FF}
+\definecolor{cerjGreen}{HTML}{3CEB2E}
+\definecolor{cerjYellow}{HTML}{F4FB95}
+\definecolor{cerjNavy}{HTML}{131A66}
+\definecolor{cerjGreenDark}{HTML}{2A9A22}
+\definecolor{cerjRoyal}{HTML}{2433C8}
+\definecolor{cerjInk}{HTML}{1D2238}
+\definecolor{cerjPaper}{HTML}{FAFAFA}
+
+% Texto e estrutura
+\setbeamercolor{normal text}{fg=cerjInk, bg=cerjPaper}
+\setbeamercolor{alerted text}{fg=cerjGreenDark}
+\setbeamercolor{example text}{fg=cerjBlue}
+\setbeamercolor{structure}{fg=cerjNavy}
+\setbeamercolor{palette primary}{fg=white, bg=cerjNavy}   % usado por [standout]
+
+% Título do slide e barras de progresso
+\setbeamercolor{frametitle}{fg=white, bg=cerjNavy}
+\setbeamercolor{progress bar}{fg=cerjGreen, bg=cerjNavy!30!cerjPaper}
+\setbeamercolor{progress bar in head/foot}{fg=cerjGreen, bg=white!25!cerjNavy}
+\setbeamercolor{progress bar in section page}{fg=cerjGreen, bg=white!25!cerjNavy}
+\setbeamercolor{title separator}{fg=cerjGreen}
+
+% Blocos
+\setbeamercolor{block title}{fg=white, bg=cerjNavy}
+\setbeamercolor{block body}{fg=cerjInk, bg=cerjNavy!8!cerjPaper}
+\setbeamercolor{block title alerted}{fg=white, bg=cerjGreenDark}
+\setbeamercolor{block body alerted}{fg=cerjInk, bg=cerjGreenDark!10!cerjPaper}
+\setbeamercolor{block title example}{fg=white, bg=cerjRoyal}
+\setbeamercolor{block body example}{fg=cerjInk, bg=cerjRoyal!8!cerjPaper}
+
+% Listas, rodapé, sumário
+\setbeamercolor{itemize item}{fg=cerjGreenDark}
+\setbeamercolor{itemize subitem}{fg=cerjGreenDark}
+\setbeamercolor{enumerate item}{fg=cerjGreenDark}
+\setbeamercolor{footline}{fg=cerjInk!65!cerjPaper}
+\setbeamercolor{page number in head/foot}{fg=cerjInk!65!cerjPaper}
+\setbeamercolor{section in toc}{fg=cerjInk}
+\setbeamercolor{section number projected}{fg=white, bg=cerjGreenDark}
+\setbeamertemplate{section in toc}[sections numbered]
+
+% Página de seção (fundo navy, aplicado em \AtBeginSection)
+\setbeamercolor{section title}{fg=white}
+\setbeamercolor{subsection title}{fg=white!75!cerjNavy}
+
+% Links
+\hypersetup{colorlinks=true, linkcolor=., urlcolor=cerjBlue, citecolor=cerjGreenDark}
+
+% ---------------------------------------------------------------------------
+% Logotipo
+% ---------------------------------------------------------------------------
+% Arquivo: img/cerj-logo.png (150 px; troque por versão em alta resolução
+% ou vetorial mantendo o nome, nada mais precisa mudar).
+\newcommand{\cerjlogofile}{cerj-logo}
+\newcommand{\cerjlogo}[1][height=1.5cm]{\includegraphics[#1]{\cerjlogofile}}
+
+% Logo na capa clara (\maketitle do metropolis, canto superior esquerdo).
+% A capa escura (\cerjtitleframe) posiciona o logo por conta própria.
+\titlegraphic{\hfill\cerjlogo[height=1.1cm]}
+
+% Rodapé: logo pequeno + título curto + instituição curta
+\newcommand{\cerjfootertext}{\insertshorttitle\ \textperiodcentered\ \insertshortinstitute}
+\setbeamertemplate{frame footer}{%
+  \raisebox{-0.45ex}{\cerjlogo[height=1.9ex]}\hspace{0.5em}\cerjfootertext
+}
+
+% ---------------------------------------------------------------------------
+% Página de título com fundo navy
+% ---------------------------------------------------------------------------
+% Use \cerjtitleframe no lugar de \maketitle: texto à esquerda, logo grande
+% à direita, separador verde. (\maketitle continua disponível para uma capa
+% clara no estilo metropolis.)
+\newcommand{\cerjtitleframe}{%
+  \begingroup
+    \setbeamercolor{background canvas}{bg=cerjNavy}%
+    \setbeamercolor{normal text}{fg=white, bg=cerjNavy}%
+    \frame[plain,noframenumbering]{%
+      \begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=east, inner sep=0pt]
+          at ([xshift=-1.1cm]current page.east) {\cerjlogo[height=3cm]};
+      \end{tikzpicture}%
+      \begin{minipage}[c]{0.64\textwidth}
+        \raggedright
+        {\usebeamerfont{title}\color{white}\inserttitle\par}
+        \ifx\insertsubtitle\@empty\else
+          \vspace{0.5em}%
+          {\usebeamerfont{subtitle}\color{cerjGreen}\insertsubtitle\par}
+        \fi
+        \vspace{0.8em}%
+        {\color{cerjGreen}\rule{\linewidth}{0.6pt}}\par
+        \vspace{0.9em}%
+        {\usebeamerfont{author}\color{white}\insertauthor\par}
+        \vspace{0.3em}%
+        {\usebeamerfont{date}\color{white!70!cerjNavy}\insertdate\par}
+        \vspace{0.2em}%
+        {\usebeamerfont{institute}\color{white!70!cerjNavy}\insertinstitute\par}
+      \end{minipage}%
+    }%
+  \endgroup
+}
+
+% ---------------------------------------------------------------------------
+% Página de seção: fundo navy, "Parte N", título, barra verde, logo
+% ---------------------------------------------------------------------------
+\newcommand{\cerjsectionlabel}{Parte}
+
+\setbeamertemplate{section page}{%
+  \centering
+  \begin{minipage}{24em}
+    \raggedright
+    {\usebeamercolor[fg]{subsection title}\usebeamerfont{subsection title}%
+     \cerjsectionlabel~\insertsectionnumber\par}
+    \vspace{0.3em}
+    {\usebeamercolor[fg]{section title}\usebeamerfont{section title}%
+     \insertsectionhead\\[-1ex]}
+    \usebeamertemplate*{progress bar in section page}
+    \par
+    \ifx\insertsubsectionhead\@empty\else%
+      \usebeamercolor[fg]{subsection title}%
+      \usebeamerfont{subsection title}%
+      \insertsubsectionhead
+    \fi
+  \end{minipage}
+  \par
+  \vspace{\baselineskip}
+}
+
+\AtBeginSection[]{%
+  \begingroup
+    \setbeamercolor{background canvas}{bg=cerjNavy}%
+    \setbeamercolor{normal text}{fg=white, bg=cerjNavy}%
+    \frame[plain,noframenumbering,t]{%
+      \hfill\cerjlogo[height=1.1cm]\par
+      \vfill
+      \sectionpage
+      \vfill
+    }%
+  \endgroup
+}
+
+\endinput

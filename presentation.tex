@@ -1,0 +1,204 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+% =============================================================================
+% Curso de Radioamadorismo para Montanhistas — CERJ
+%
+% Compilar:   latexmk            (lê latexmkrc: LuaLaTeX, saída em build/)
+%             latexmk -pvc       (recompila a cada salvamento)
+%             latexmk -C         (limpa a pasta build/)
+% Estrutura:  engine/beamerthemecerj.sty  cores, logo, páginas de título/seção
+%             engine/cerj-macros.sty      \freq, \indicativo, caixas dica/atencao/
+%                                         regulamento, \cerjfullimage
+%             img/                        imagens (cerj-logo.png e suas fotos)
+% =============================================================================
+\documentclass[aspectratio=169, 11pt]{beamer}
+
+% Permite \usetheme{cerj} mesmo sem latexmk (procura em engine/)
+\makeatletter\def\input@path{{engine/}}\makeatother
+\usetheme{cerj}
+
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=brazilian]{portuguese}
+
+\usepackage{cerj-macros}
+\usepackage{appendixnumberbeamer}   % slides após \appendix não contam no total
+\graphicspath{{img/}}
+
+% --- Metadados --------------------------------------------------------------
+\title[Radioamadorismo para Montanhistas]{Radioamadorismo para Montanhistas}
+\subtitle{Comunicação na montanha quando o celular não funciona}
+\author{Rafael Beraldo \textperiodcentered\ \indicativo{PY1XXX}}
+\institute[CERJ]{Centro Excursionista Rio de Janeiro}
+\date{12 de novembro de 2026}
+
+\begin{document}
+
+% =============================================================================
+% 1. Capa (fundo navy; use \maketitle para uma capa clara)
+% =============================================================================
+\cerjtitleframe
+
+% =============================================================================
+% 2. Sumário
+% =============================================================================
+\begin{frame}{Sumário}
+  \tableofcontents
+\end{frame}
+
+% =============================================================================
+\section{Por que rádio na montanha?}
+% =============================================================================
+
+% --- Lista com revelação progressiva ----------------------------------------
+\begin{frame}{Quando o celular não ajuda}
+  \begin{itemize}[<+->]
+    \item Sem cobertura em vales, encostas e trilhas longas
+    \item Bateria acaba justamente quando mais precisamos
+    \item O rádio fala com \alert{todo mundo ao alcance}, não com um número
+    \item Um rádio de \destaque{VHF} de mão custa menos que uma bota
+  \end{itemize}
+\end{frame}
+
+% --- Duas colunas: texto + imagem -------------------------------------------
+\begin{frame}{Rádio e montanhismo se complementam}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.55\textwidth}
+      \textbf{O que o rádio resolve}
+      \begin{itemize}
+        \item Coordenação entre cordadas
+        \item Contato com a base e com equipes de resgate
+        \item Boletim meteorológico em tempo real
+      \end{itemize}
+      \vspace{0.5em}
+      \textbf{O que o rádio exige}
+      \begin{itemize}
+        \item Licença da Anatel e indicativo
+        \item Disciplina de operação
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      % Troque example-image-a por img/sua-foto.jpg
+      \includegraphics[width=\linewidth]{example-image-a}
+      \par\vspace{0.3em}
+      {\scriptsize\color{cerjInk!60!cerjPaper} Legenda da foto}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% --- Foto em tela cheia com faixa de legenda --------------------------------
+% \cerjfullimage[opções]{arquivo}{legenda}; arquivo em img/
+\cerjfullimage{example-image-16x9}{%
+  \usebeamerfont{frametitle}Pedra do Sino, Teresópolis\par
+  \small Repetidora alcançável a partir do cume}
+
+% =============================================================================
+\section{Conceitos básicos}
+% =============================================================================
+
+% --- Tabela -----------------------------------------------------------------
+\begin{frame}{Faixas mais usadas pelo montanhista}
+  % Valores ilustrativos: confira no plano de bandas antes de apresentar
+  \begin{center}
+    \begin{tabular}{@{}llll@{}}
+      \toprule
+      Banda & Faixa & Alcance típico & Uso \\
+      \midrule
+      2 m   & \freqrange{144}{148}   & Linha de visada & Simplex local, repetidoras \\
+      70 cm & \freqrange{430}{440}   & Linha de visada & Simplex, repetidoras urbanas \\
+      40 m  & \freqrange{7.0}{7.3}   & Centenas de km   & Contato com a base distante \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \vspace{0.5em}
+  Frequência de chamada simplex em VHF: \freq{146.520}
+\end{frame}
+
+% --- Blocos do beamer -------------------------------------------------------
+\begin{frame}{Blocos: definição, alerta e exemplo}
+  \begin{block}{Simplex}
+    Comunicação direta entre dois rádios, na mesma frequência, sem repetidora.
+  \end{block}
+  \begin{alertblock}{Emergência}
+    Em emergência real, qualquer frequência pode ser usada para pedir socorro.
+  \end{alertblock}
+  \begin{exampleblock}{Exemplo de chamada}
+    “\indicativo{PY1XXX} chamando \indicativo{PY1YYY}, câmbio.”
+  \end{exampleblock}
+\end{frame}
+
+% --- Caixas de destaque (tcolorbox) -----------------------------------------
+\begin{frame}{Caixas de destaque}
+  \begin{dica}
+    Leve uma antena telescópica de meia onda: dobra o alcance do rádio de mão.
+  \end{dica}
+  \begin{atencao}
+    Não transmita com a antena desconectada, o estágio final do rádio queima.
+  \end{atencao}
+  \begin{regulamento}
+    Operar sem licença é infração à Lei Geral de Telecomunicações.
+  \end{regulamento}
+\end{frame}
+
+% --- Lista numerada: passo a passo ------------------------------------------
+\begin{frame}{Como pedir ajuda pelo rádio}
+  \begin{enumerate}
+    \item Respire, escute a frequência por alguns segundos
+    \item Diga seu indicativo e “\alert{emergência}” três vezes
+    \item Informe \destaque{onde}, \destaque{quem} e \destaque{o quê}
+    \item Fique na escuta, não desligue o rádio
+  \end{enumerate}
+\end{frame}
+
+% --- Frase de impacto (standout do metropolis) ------------------------------
+\begin{frame}[standout]
+  Sem sinal de celular? \\ Sem problema.
+\end{frame}
+
+% =============================================================================
+\section{Na prática}
+% =============================================================================
+
+\begin{frame}{Equipamento mínimo para a trilha}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{itemize}
+        \item Rádio de mão VHF/UHF
+        \item Bateria extra carregada
+        \item Antena telescópica
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{itemize}
+        \item Cartão com frequências da região
+        \item Saco estanque
+        \item Fone de ouvido para vento forte
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% --- Encerramento -----------------------------------------------------------
+\begin{frame}[standout]
+  \cerjlogo[height=2cm]\par
+  \vspace{0.5em}
+  Obrigado! \\[0.4em]
+  {\small\normalfont
+    \faEnvelope\ rafael.beraldo@impatech.edu.br \quad
+    \faGlobe\ cerj.org.br \quad
+    \faBroadcastTower\ \indicativo{PY1XXX}}
+\end{frame}
+
+% =============================================================================
+% Anexos (não contam na numeração total)
+% =============================================================================
+\appendix
+
+\begin{frame}{Para saber mais}
+  \begin{itemize}
+    \item Anatel: regulamento do serviço de radioamador
+    \item LABRE: plano de bandas e exames
+    \item CERJ: \url{https://cerj.org.br}
+  \end{itemize}
+\end{frame}
+
+\end{document}

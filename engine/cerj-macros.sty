@@ -1,0 +1,117 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+%% cerj-macros.sty
+%% Macros de conteúdo para o curso: indicativos, frequências, caixas de
+%% destaque (Dica / Atenção / Regulamento) e slide de foto em tela cheia.
+%% Depende das cores definidas em beamerthemecerj.sty.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cerj-macros}[2026/11/07 v0.1 Macros do curso de radioamadorismo CERJ]
+
+\RequirePackage{booktabs}
+\RequirePackage{siunitx}
+\RequirePackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, calc}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{fontawesome5}
+
+% URLs na fonte do texto, não em monoespaçado
+\urlstyle{same}
+
+% ---------------------------------------------------------------------------
+% Números e unidades (vírgula decimal, modo texto para herdar a fonte Fira)
+% ---------------------------------------------------------------------------
+\sisetup{
+  mode = text,
+  output-decimal-marker = {,},
+  group-minimum-digits = 4,
+  range-phrase = { a },
+  range-units = single,
+}
+
+% \freq{146.520}            -> 146,520 MHz
+% \freqrange{144}{148}      -> 144 a 148 MHz
+\newcommand{\freq}[1]{\qty{#1}{\mega\hertz}}
+\newcommand{\freqrange}[2]{\qtyrange{#1}{#2}{\mega\hertz}}
+
+% Indicativo de chamada em monoespaçado: \indicativo{PY1XXX}
+% Herda a cor do texto, então funciona em fundo claro e escuro.
+\newcommand{\indicativo}[1]{{\ttfamily #1}}
+
+% Termo em destaque (verde) sem ser overlay: \destaque{simplex}
+\newcommand{\destaque}[1]{\textcolor{cerjGreenDark}{\textbf{#1}}}
+
+% ---------------------------------------------------------------------------
+% Caixas de destaque (tcolorbox)
+% ---------------------------------------------------------------------------
+\tcbset{
+  cerjbox/.style={
+    enhanced,
+    boxrule=0pt,
+    leftrule=3pt,
+    arc=0pt,
+    outer arc=0pt,
+    left=6pt, right=6pt, top=4pt, bottom=4pt,
+    fonttitle=\bfseries\small,
+    coltitle=white,
+    toptitle=2pt, bottomtitle=2pt,
+    attach boxed title to top left={yshift=-\tcboxedtitleheight/2, xshift=6pt},
+    boxed title style={arc=0pt, boxrule=0pt, left=4pt, right=4pt},
+    before upper={\vspace{0.4em}},
+  },
+}
+
+% \begin{dica} ... \end{dica}
+\newtcolorbox{dica}[1][]{
+  cerjbox,
+  colback=cerjGreenDark!8!cerjPaper,
+  colframe=cerjGreenDark,
+  colbacktitle=cerjGreenDark,
+  title={\faLightbulb\ Dica},
+  #1
+}
+
+% \begin{atencao} ... \end{atencao}
+\newtcolorbox{atencao}[1][]{
+  cerjbox,
+  colback=cerjYellow!55!cerjPaper,
+  colframe=cerjNavy,
+  colbacktitle=cerjNavy,
+  title={\faExclamationTriangle\ Atenção},
+  #1
+}
+
+% \begin{regulamento} ... \end{regulamento}
+\newtcolorbox{regulamento}[1][]{
+  cerjbox,
+  colback=cerjNavy!7!cerjPaper,
+  colframe=cerjNavy,
+  colbacktitle=cerjNavy,
+  title={\faGavel\ Regulamento},
+  #1
+}
+
+% ---------------------------------------------------------------------------
+% Foto em tela cheia com faixa de legenda
+% ---------------------------------------------------------------------------
+% \cerjfullimage[opções do includegraphics]{arquivo}{legenda}
+% Por padrão a imagem ocupa toda a largura e é cortada em altura; para fotos
+% em retrato use [height=\paperheight].
+\newcommand{\cerjfullimage}[3][width=\paperwidth]{%
+  \frame[plain,noframenumbering]{%
+    \begin{tikzpicture}[remember picture, overlay]
+      \clip (current page.south west) rectangle (current page.north east);
+      \node[inner sep=0pt] at (current page.center)
+        {\includegraphics[#1]{#2}};
+      \node[
+        anchor=south west,
+        fill=cerjNavy, fill opacity=0.85,
+        text opacity=1, text=white,
+        text width=\dimexpr\paperwidth-20pt\relax,
+        inner xsep=10pt, inner ysep=8pt,
+        align=left,
+      ] at (current page.south west) {#3};
+    \end{tikzpicture}%
+  }%
+}
+
+\endinput
