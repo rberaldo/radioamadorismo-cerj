@@ -10,3 +10,8 @@ build/
 *.fdb_latexmk
 *.synctex.gz
 .DS_Store
+
+# Anotações pessoais de planejamento (não versionadas)
+notes.org
+# Arquivos de trava do Emacs
+.#*
