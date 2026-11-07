@@ -32,7 +32,8 @@ acrescenta `engine/` ao caminho de busca do TeX.
 presentation.tex          conteúdo dos slides
 latexmkrc                 configuração do latexmk (LuaLaTeX, saída em build/)
 engine/
-  beamerthemecerj.sty     tema: cores, logo, capa, páginas de seção, rodapé
+  beamerthemecerj.sty     tema: logo, capa, páginas de seção, rodapé
+  cerj-cores.sty          paleta CERJ (usada pelo tema e pelas figuras)
   cerj-macros.sty         macros do curso: frequências, indicativos, caixas
 img/
   cerj-logo.png           emblema do CERJ
@@ -67,7 +68,7 @@ Macros de texto:
 
 ## Personalização
 
-**Cores.** Ficam no início de `engine/beamerthemecerj.sty`. As cores
+**Cores.** Ficam em `engine/cerj-cores.sty`. As cores
 `cerjBlue`, `cerjGreen` e `cerjYellow` foram medidas no emblema oficial. As
 demais são derivadas delas, porque o azul e o verde puros do emblema ofuscam
 quando usados como fundo em projetores.

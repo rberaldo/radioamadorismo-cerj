@@ -1,0 +1,30 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+%% cerj-cores.sty
+%% Paleta CERJ. Usada pelo tema (beamerthemecerj.sty) e pelas figuras
+%% compiladas à parte (classe standalone), para que tudo tenha as mesmas cores.
+%%
+%% Cores do logotipo (medidas no PNG oficial) e derivadas:
+%%   cerjBlue      #0008FF  azul do logo (texto, contorno, montanha principal)
+%%   cerjGreen     #3CEB2E  verde do logo (vegetação)
+%%   cerjYellow    #F4FB95  amarelo-claro do logo (realce)
+%%   cerjNavy      #131A66  azul-marinho derivado, para fundos (título, seções, barra)
+%%   cerjGreenDark #2A9A22  verde derivado, para texto/realces sobre fundo claro
+%%   cerjRoyal     #2433C8  azul do logo suavizado, para preenchimentos médios
+%%   cerjInk       #1D2238  cor do texto corrido
+%%   cerjPaper     #FAFAFA  fundo dos slides
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cerj-cores}[2026/11/07 v0.1 Paleta CERJ]
+
+\RequirePackage{xcolor}
+
+\definecolor{cerjBlue}{HTML}{0008FF}
+\definecolor{cerjGreen}{HTML}{3CEB2E}
+\definecolor{cerjYellow}{HTML}{F4FB95}
+\definecolor{cerjNavy}{HTML}{131A66}
+\definecolor{cerjGreenDark}{HTML}{2A9A22}
+\definecolor{cerjRoyal}{HTML}{2433C8}
+\definecolor{cerjInk}{HTML}{1D2238}
+\definecolor{cerjPaper}{HTML}{FAFAFA}
+
+\endinput

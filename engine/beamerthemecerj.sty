@@ -3,16 +3,7 @@
 %% beamerthemecerj.sty
 %% Tema CERJ construído sobre o metropolis (mtheme).
 %% Carregue com \usetheme{cerj} (engine/ precisa estar no TEXINPUTS ou em \input@path).
-%%
-%% Cores do logotipo (medidas no PNG oficial) e derivadas:
-%%   cerjBlue      #0008FF  azul do logo (texto, contorno, montanha principal)
-%%   cerjGreen     #3CEB2E  verde do logo (vegetação)
-%%   cerjYellow    #F4FB95  amarelo-claro do logo (realce)
-%%   cerjNavy      #131A66  azul-marinho derivado, para fundos (título, seções, barra)
-%%   cerjGreenDark #2A9A22  verde derivado, para texto/realces sobre fundo claro
-%%   cerjRoyal     #2433C8  azul do logo suavizado, para preenchimentos médios
-%%   cerjInk       #1D2238  cor do texto corrido
-%%   cerjPaper     #FAFAFA  fundo dos slides
+%% Paleta em cerj-cores.sty.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{beamerthemecerj}[2026/11/07 v0.1 Tema CERJ sobre metropolis]
 
@@ -36,14 +27,7 @@
 % ---------------------------------------------------------------------------
 % Paleta
 % ---------------------------------------------------------------------------
-\definecolor{cerjBlue}{HTML}{0008FF}
-\definecolor{cerjGreen}{HTML}{3CEB2E}
-\definecolor{cerjYellow}{HTML}{F4FB95}
-\definecolor{cerjNavy}{HTML}{131A66}
-\definecolor{cerjGreenDark}{HTML}{2A9A22}
-\definecolor{cerjRoyal}{HTML}{2433C8}
-\definecolor{cerjInk}{HTML}{1D2238}
-\definecolor{cerjPaper}{HTML}{FAFAFA}
+\RequirePackage{cerj-cores}   % cores do logo e derivadas
 
 % Texto e estrutura
 \setbeamercolor{normal text}{fg=cerjInk, bg=cerjPaper}
