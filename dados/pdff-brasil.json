@@ -1,0 +1,9193 @@
+{
+"meta": {
+"fonte": "Anatel — Plano de Atribuição, Destinação e Distribuição de Faixas de Frequências no Brasil (PDFF), Resolução Anatel nº 789, de 06/07/2026; coluna Brasil",
+"obtido_em": "2026-11-07",
+"url": "https://sistemas.anatel.gov.br/se/modulos/plano/consulta"
+},
+"faixas": [
+{
+"ini_khz": 0,
+"fim_khz": 8.3,
+"servicos": [
+{
+"nome": "(Não Atribuída)",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 8.3,
+"fim_khz": 9,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 9,
+"fim_khz": 11.3,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 11.3,
+"fim_khz": 14,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 14,
+"fim_khz": 19.95,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 19.95,
+"fim_khz": 20.05,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 20.05,
+"fim_khz": 70,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 70,
+"fim_khz": 90,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO MARÍTIMA",
+"primario": true
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 90,
+"fim_khz": 110,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+},
+{
+"nome": "Fixo",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 110,
+"fim_khz": 130,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO MARÍTIMA",
+"primario": true
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 130,
+"fim_khz": 135.7,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 135.7,
+"fim_khz": 137.8,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 137.8,
+"fim_khz": 160,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 160,
+"fim_khz": 190,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 190,
+"fim_khz": 200,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 200,
+"fim_khz": 275,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "Móvel Aeronáutico",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 275,
+"fim_khz": 285,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "Móvel Aeronáutico",
+"primario": false
+},
+{
+"nome": "Radionavegação Marítima",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 285,
+"fim_khz": 325,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO MARÍTIMA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 325,
+"fim_khz": 335,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "Móvel Aeronáutico",
+"primario": false
+},
+{
+"nome": "Radionavegação Marítima",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 335,
+"fim_khz": 405,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "Móvel Aeronáutico",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 405,
+"fim_khz": 415,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 415,
+"fim_khz": 472,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+},
+{
+"nome": "Radionavegação Aeronáutica",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 472,
+"fim_khz": 479,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radionavegação Aeronáutica",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 479,
+"fim_khz": 490,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+},
+{
+"nome": "Radionavegação Aeronáutica",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 490,
+"fim_khz": 510,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 510,
+"fim_khz": 525,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 525,
+"fim_khz": 535,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 535,
+"fim_khz": 1625,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1625,
+"fim_khz": 1705,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+},
+{
+"nome": "Radionavegação Aeronáutica",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1705,
+"fim_khz": 1800,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1800,
+"fim_khz": 1850,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1850,
+"fim_khz": 2000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2000,
+"fim_khz": 2065,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2065,
+"fim_khz": 2107,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2107,
+"fim_khz": 2170,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2170,
+"fim_khz": 2173.5,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2173.5,
+"fim_khz": 2190.5,
+"servicos": [
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2190.5,
+"fim_khz": 2194,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2194,
+"fim_khz": 2300,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2300,
+"fim_khz": 2495,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2495,
+"fim_khz": 2501,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2501,
+"fim_khz": 2502,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 2502,
+"fim_khz": 2505,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2505,
+"fim_khz": 2850,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2850,
+"fim_khz": 3025,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 3025,
+"fim_khz": 3155,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (OR)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 3155,
+"fim_khz": 3200,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 3200,
+"fim_khz": 3230,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 3230,
+"fim_khz": 3400,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 3400,
+"fim_khz": 3500,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 3500,
+"fim_khz": 3800,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 3800,
+"fim_khz": 4000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4000,
+"fim_khz": 4063,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4063,
+"fim_khz": 4438,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4438,
+"fim_khz": 4650,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4650,
+"fim_khz": 4700,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4700,
+"fim_khz": 4750,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (OR)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4750,
+"fim_khz": 4995,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4995,
+"fim_khz": 5003,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5003,
+"fim_khz": 5005,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 5005,
+"fim_khz": 5060,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5060,
+"fim_khz": 5250,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 5250,
+"fim_khz": 5275,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5275,
+"fim_khz": 5351.5,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5351.5,
+"fim_khz": 5366.5,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 5366.5,
+"fim_khz": 5450,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5450,
+"fim_khz": 5680,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5680,
+"fim_khz": 5730,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (OR)",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5730,
+"fim_khz": 5900,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5900,
+"fim_khz": 6200,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 6200,
+"fim_khz": 6525,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 6525,
+"fim_khz": 6685,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 6685,
+"fim_khz": 6765,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (OR)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 6765,
+"fim_khz": 7000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7000,
+"fim_khz": 7100,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7100,
+"fim_khz": 7300,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7300,
+"fim_khz": 7350,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7350,
+"fim_khz": 7400,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "Móvel Terrestre",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 7400,
+"fim_khz": 8100,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8100,
+"fim_khz": 8195,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8195,
+"fim_khz": 8815,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8815,
+"fim_khz": 8965,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8965,
+"fim_khz": 9040,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (OR)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 9040,
+"fim_khz": 9400,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 9400,
+"fim_khz": 9900,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 9900,
+"fim_khz": 9995,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 9995,
+"fim_khz": 10003,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 10003,
+"fim_khz": 10005,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 10005,
+"fim_khz": 10100,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 10100,
+"fim_khz": 10150,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 10150,
+"fim_khz": 11175,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 11175,
+"fim_khz": 11275,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (OR)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 11275,
+"fim_khz": 11400,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 11400,
+"fim_khz": 11600,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 11600,
+"fim_khz": 12100,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 12100,
+"fim_khz": 12230,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 12230,
+"fim_khz": 13200,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 13200,
+"fim_khz": 13260,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (OR)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 13260,
+"fim_khz": 13360,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 13360,
+"fim_khz": 13410,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 13410,
+"fim_khz": 13450,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 13450,
+"fim_khz": 13550,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 13550,
+"fim_khz": 13570,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 13570,
+"fim_khz": 13870,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 13870,
+"fim_khz": 14000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 14000,
+"fim_khz": 14250,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 14250,
+"fim_khz": 14350,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 14350,
+"fim_khz": 14990,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 14990,
+"fim_khz": 15005,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 15005,
+"fim_khz": 15010,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 15010,
+"fim_khz": 15100,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (OR)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 15100,
+"fim_khz": 15800,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 15800,
+"fim_khz": 16100,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 16100,
+"fim_khz": 16200,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 16200,
+"fim_khz": 16360,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 16360,
+"fim_khz": 17410,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 17410,
+"fim_khz": 17480,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 17480,
+"fim_khz": 17900,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 17900,
+"fim_khz": 17970,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 17970,
+"fim_khz": 18030,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (OR)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 18030,
+"fim_khz": 18052,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 18052,
+"fim_khz": 18068,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 18068,
+"fim_khz": 18168,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 18168,
+"fim_khz": 18780,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 18780,
+"fim_khz": 18900,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 18900,
+"fim_khz": 19020,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 19020,
+"fim_khz": 19680,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 19680,
+"fim_khz": 19800,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 19800,
+"fim_khz": 19990,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 19990,
+"fim_khz": 19995,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 19995,
+"fim_khz": 20010,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 20010,
+"fim_khz": 21000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 21000,
+"fim_khz": 21450,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 21450,
+"fim_khz": 21850,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 21850,
+"fim_khz": 21924,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 21924,
+"fim_khz": 22000,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 22000,
+"fim_khz": 22855,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 22855,
+"fim_khz": 23200,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 23200,
+"fim_khz": 23350,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL AERONÁUTICO (OR)",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 23350,
+"fim_khz": 24000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 24000,
+"fim_khz": 24890,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 24890,
+"fim_khz": 24990,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 24990,
+"fim_khz": 25005,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 25005,
+"fim_khz": 25010,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 25010,
+"fim_khz": 25070,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 25070,
+"fim_khz": 25210,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 25210,
+"fim_khz": 25550,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 25550,
+"fim_khz": 25600,
+"servicos": [
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 25600,
+"fim_khz": 26100,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 26100,
+"fim_khz": 26175,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 26175,
+"fim_khz": 27500,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 27500,
+"fim_khz": 28000,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 28000,
+"fim_khz": 29700,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 29700,
+"fim_khz": 30005,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 30005,
+"fim_khz": 30010,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 30010,
+"fim_khz": 37500,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 37500,
+"fim_khz": 38250,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioastronomia",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 38250,
+"fim_khz": 39986,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 39986,
+"fim_khz": 40000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 40000,
+"fim_khz": 40020,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 40020,
+"fim_khz": 40980,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 40980,
+"fim_khz": 41015,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 41015,
+"fim_khz": 50000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 50000,
+"fim_khz": 54000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 54000,
+"fim_khz": 72000,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "Fixo",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 72000,
+"fim_khz": 73000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 73000,
+"fim_khz": 74600,
+"servicos": [
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 74600,
+"fim_khz": 74800,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 74800,
+"fim_khz": 75200,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 75200,
+"fim_khz": 76000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 76000,
+"fim_khz": 87800,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 87800,
+"fim_khz": 88000,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "Fixo",
+"primario": false
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 88000,
+"fim_khz": 108000,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 108000,
+"fim_khz": 117975,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 117975,
+"fim_khz": 137000,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO (R)",
+"primario": true
+},
+{
+"nome": "MÓVEL AERONÁUTICO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 137000,
+"fim_khz": 137025,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 137025,
+"fim_khz": 137175,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 137175,
+"fim_khz": 137825,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 137825,
+"fim_khz": 138000,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 138000,
+"fim_khz": 143600,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 143600,
+"fim_khz": 143650,
+"servicos": [
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 143650,
+"fim_khz": 144000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 144000,
+"fim_khz": 146000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 146000,
+"fim_khz": 148000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 148000,
+"fim_khz": 149900,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 149900,
+"fim_khz": 150050,
+"servicos": [
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 150050,
+"fim_khz": 156000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 156000,
+"fim_khz": 156487.5,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 156487.5,
+"fim_khz": 156562.5,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 156562.5,
+"fim_khz": 156762.5,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 156762.5,
+"fim_khz": 156787.5,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 156787.5,
+"fim_khz": 156812.5,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 156812.5,
+"fim_khz": 156837.5,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 156837.5,
+"fim_khz": 157187.5,
+"servicos": [
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 157187.5,
+"fim_khz": 157337.5,
+"servicos": [
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Móvel Marítimo Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 157337.5,
+"fim_khz": 157450,
+"servicos": [
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 157450,
+"fim_khz": 160600,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 160600,
+"fim_khz": 160975,
+"servicos": [
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 160975,
+"fim_khz": 161475,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 161475,
+"fim_khz": 161787.5,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 161787.5,
+"fim_khz": 161937.5,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+},
+{
+"nome": "Móvel Marítimo Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 161937.5,
+"fim_khz": 162050,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 162050,
+"fim_khz": 174000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 174000,
+"fim_khz": 216000,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "Fixo",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 216000,
+"fim_khz": 220000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 220000,
+"fim_khz": 225000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 225000,
+"fim_khz": 235000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 235000,
+"fim_khz": 237000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 237000,
+"fim_khz": 250000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 250000,
+"fim_khz": 272000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 272000,
+"fim_khz": 273000,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 273000,
+"fim_khz": 292000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 292000,
+"fim_khz": 312000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 312000,
+"fim_khz": 315000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 315000,
+"fim_khz": 322000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 322000,
+"fim_khz": 328600,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 328600,
+"fim_khz": 335400,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 335400,
+"fim_khz": 363100,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 363100,
+"fim_khz": 363275,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 363275,
+"fim_khz": 363500,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 363500,
+"fim_khz": 378700,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 378700,
+"fim_khz": 378875,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 378875,
+"fim_khz": 399900,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 399900,
+"fim_khz": 400050,
+"servicos": [
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 400050,
+"fim_khz": 400150,
+"servicos": [
+{
+"nome": "FREQUÊNCIAS PADRÃO E SINAIS HORÁRIOS POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 400150,
+"fim_khz": 401000,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Operação Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 401000,
+"fim_khz": 402000,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+},
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 402000,
+"fim_khz": 403000,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+},
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 403000,
+"fim_khz": 406000,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 406000,
+"fim_khz": 406100,
+"servicos": [
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 406100,
+"fim_khz": 410000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 410000,
+"fim_khz": 420000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 420000,
+"fim_khz": 430000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 430000,
+"fim_khz": 432000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 432000,
+"fim_khz": 435000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Operação Espacial",
+"primario": false
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 435000,
+"fim_khz": 438000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 438000,
+"fim_khz": 440000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 440000,
+"fim_khz": 449750,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 449750,
+"fim_khz": 450000,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 450000,
+"fim_khz": 450250,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 450250,
+"fim_khz": 451000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 451000,
+"fim_khz": 455000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 455000,
+"fim_khz": 456000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 456000,
+"fim_khz": 458000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 458000,
+"fim_khz": 459000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 459000,
+"fim_khz": 460000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 460000,
+"fim_khz": 461000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Meteorologia Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 461000,
+"fim_khz": 468000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Meteorologia Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 468000,
+"fim_khz": 470000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Meteorologia Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 470000,
+"fim_khz": 608000,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "Fixo",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 608000,
+"fim_khz": 614000,
+"servicos": [
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 614000,
+"fim_khz": 698000,
+"servicos": [
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "Fixo",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 698000,
+"fim_khz": 703000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 703000,
+"fim_khz": 748000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 748000,
+"fim_khz": 758000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 758000,
+"fim_khz": 803000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 803000,
+"fim_khz": 806000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 806000,
+"fim_khz": 819000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 819000,
+"fim_khz": 849000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 849000,
+"fim_khz": 864000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 864000,
+"fim_khz": 894000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 894000,
+"fim_khz": 898500,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 898500,
+"fim_khz": 901000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 901000,
+"fim_khz": 902000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 902000,
+"fim_khz": 905000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 905000,
+"fim_khz": 907500,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+},
+{
+"nome": "Móvel Marítimo",
+"primario": false
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 907500,
+"fim_khz": 915000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 915000,
+"fim_khz": 928000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 928000,
+"fim_khz": 942000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 942000,
+"fim_khz": 943500,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 943500,
+"fim_khz": 946000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 946000,
+"fim_khz": 950000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 950000,
+"fim_khz": 960000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 960000,
+"fim_khz": 980000,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 980000,
+"fim_khz": 1164000,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1164000,
+"fim_khz": 1215000,
+"servicos": [
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1215000,
+"fim_khz": 1240000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1240000,
+"fim_khz": 1260000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1260000,
+"fim_khz": 1270000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1270000,
+"fim_khz": 1300000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1300000,
+"fim_khz": 1350000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1350000,
+"fim_khz": 1400000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1400000,
+"fim_khz": 1427000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1427000,
+"fim_khz": 1429000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Operação Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1429000,
+"fim_khz": 1452000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1452000,
+"fim_khz": 1492000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1492000,
+"fim_khz": 1518000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1518000,
+"fim_khz": 1525000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1525000,
+"fim_khz": 1535000,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Fixo",
+"primario": false
+},
+{
+"nome": "Móvel",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1535000,
+"fim_khz": 1559000,
+"servicos": [
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1559000,
+"fim_khz": 1610000,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1610000,
+"fim_khz": 1610600,
+"servicos": [
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "RADIODETERMINAÇÃO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1610600,
+"fim_khz": 1613800,
+"servicos": [
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "RADIODETERMINAÇÃO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1613800,
+"fim_khz": 1621350,
+"servicos": [
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "RADIODETERMINAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1621350,
+"fim_khz": 1626500,
+"servicos": [
+{
+"nome": "MÓVEL MARÍTIMO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "RADIODETERMINAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1626500,
+"fim_khz": 1660000,
+"servicos": [
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1660000,
+"fim_khz": 1660500,
+"servicos": [
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1660500,
+"fim_khz": 1668000,
+"servicos": [
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1668000,
+"fim_khz": 1668400,
+"servicos": [
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1668400,
+"fim_khz": 1670000,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1670000,
+"fim_khz": 1675000,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1675000,
+"fim_khz": 1690000,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1690000,
+"fim_khz": 1700000,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1700000,
+"fim_khz": 1706000,
+"servicos": [
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1706000,
+"fim_khz": 1710000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Meteorologia Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1710000,
+"fim_khz": 1785000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1785000,
+"fim_khz": 1805000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1805000,
+"fim_khz": 1880000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1880000,
+"fim_khz": 1920000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 1920000,
+"fim_khz": 1980000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 1980000,
+"fim_khz": 2025000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2025000,
+"fim_khz": 2110000,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2110000,
+"fim_khz": 2120000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 2120000,
+"fim_khz": 2160000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 2160000,
+"fim_khz": 2170000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 2170000,
+"fim_khz": 2200000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2200000,
+"fim_khz": 2290000,
+"servicos": [
+{
+"nome": "OPERAÇÃO ESPACIAL",
+"primario": true
+},
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2290000,
+"fim_khz": 2300000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2300000,
+"fim_khz": 2400000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 2400000,
+"fim_khz": 2450000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 2450000,
+"fim_khz": 2483500,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2483500,
+"fim_khz": 2500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIODETERMINAÇÃO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2500000,
+"fim_khz": 2570000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 2570000,
+"fim_khz": 2620000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2620000,
+"fim_khz": 2655000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 2655000,
+"fim_khz": 2670000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+},
+{
+"nome": "Radioastronomia",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 2670000,
+"fim_khz": 2690000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+},
+{
+"nome": "Radioastronomia",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 2690000,
+"fim_khz": 2700000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 2700000,
+"fim_khz": 2900000,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 2900000,
+"fim_khz": 3100000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 3100000,
+"fim_khz": 3300000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 3300000,
+"fim_khz": 3400000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 3400000,
+"fim_khz": 3410000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 3410000,
+"fim_khz": 3500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 3500000,
+"fim_khz": 3600000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 3600000,
+"fim_khz": 3700000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Fixo Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 3700000,
+"fim_khz": 3800000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 3800000,
+"fim_khz": 4200000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4200000,
+"fim_khz": 4400000,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4400000,
+"fim_khz": 4500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4500000,
+"fim_khz": 4530000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4530000,
+"fim_khz": 4610000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL AERONÁUTICO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4610000,
+"fim_khz": 4800000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 4800000,
+"fim_khz": 4990000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioastronomia",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 4990000,
+"fim_khz": 5000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 5000000,
+"fim_khz": 5010000,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5010000,
+"fim_khz": 5030000,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5030000,
+"fim_khz": 5091000,
+"servicos": [
+{
+"nome": "MÓVEL AERONÁUTICO",
+"primario": true
+},
+{
+"nome": "MÓVEL AERONÁUTICO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5091000,
+"fim_khz": 5150000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL AERONÁUTICO",
+"primario": true
+},
+{
+"nome": "MÓVEL AERONÁUTICO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5150000,
+"fim_khz": 5216000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "RADIODETERMINAÇÃO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5216000,
+"fim_khz": 5250000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5250000,
+"fim_khz": 5255000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5255000,
+"fim_khz": 5350000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5350000,
+"fim_khz": 5460000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5460000,
+"fim_khz": 5470000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5470000,
+"fim_khz": 5570000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO MARÍTIMA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5570000,
+"fim_khz": 5650000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO MARÍTIMA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 5650000,
+"fim_khz": 5670000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 5670000,
+"fim_khz": 5725000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 5725000,
+"fim_khz": 5830000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 5830000,
+"fim_khz": 5850000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 5850000,
+"fim_khz": 5925000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 5925000,
+"fim_khz": 6700000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 6700000,
+"fim_khz": 7075000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7075000,
+"fim_khz": 7145000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7145000,
+"fim_khz": 7190000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7190000,
+"fim_khz": 7235000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7235000,
+"fim_khz": 7250000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7250000,
+"fim_khz": 7425000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7425000,
+"fim_khz": 7450000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7450000,
+"fim_khz": 7550000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7550000,
+"fim_khz": 7750000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7750000,
+"fim_khz": 7900000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7900000,
+"fim_khz": 7975000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 7975000,
+"fim_khz": 8025000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8025000,
+"fim_khz": 8175000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8175000,
+"fim_khz": 8215000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "METEOROLOGIA POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8215000,
+"fim_khz": 8400000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8400000,
+"fim_khz": 8500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8500000,
+"fim_khz": 8550000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8550000,
+"fim_khz": 8650000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8650000,
+"fim_khz": 8750000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8750000,
+"fim_khz": 8850000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 8850000,
+"fim_khz": 9000000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 9000000,
+"fim_khz": 9200000,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 9200000,
+"fim_khz": 9300000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO MARÍTIMA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 9300000,
+"fim_khz": 9500000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 9500000,
+"fim_khz": 9800000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 9800000,
+"fim_khz": 9900000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Fixo",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 9900000,
+"fim_khz": 10000000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Fixo",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 10000000,
+"fim_khz": 10450000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 10450000,
+"fim_khz": 10500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 10500000,
+"fim_khz": 10550000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 10550000,
+"fim_khz": 10600000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 10600000,
+"fim_khz": 10680000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 10680000,
+"fim_khz": 10700000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 10700000,
+"fim_khz": 11700000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 11700000,
+"fim_khz": 12200000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 12200000,
+"fim_khz": 12500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 12500000,
+"fim_khz": 12700000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 12700000,
+"fim_khz": 12750000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 12750000,
+"fim_khz": 13250000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 13250000,
+"fim_khz": 13400000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 13400000,
+"fim_khz": 13750000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Frequências Padrão E Sinais Horários Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 13750000,
+"fim_khz": 14000000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 14000000,
+"fim_khz": 14300000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 14300000,
+"fim_khz": 14400000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+},
+{
+"nome": "Radionavegação Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 14400000,
+"fim_khz": 14470000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 14470000,
+"fim_khz": 14500000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+},
+{
+"nome": "Radioastronomia",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 14500000,
+"fim_khz": 14800000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 14800000,
+"fim_khz": 15350000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 15350000,
+"fim_khz": 15400000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 15400000,
+"fim_khz": 15430000,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 15430000,
+"fim_khz": 15630000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 15630000,
+"fim_khz": 15700000,
+"servicos": [
+{
+"nome": "RADIONAVEGAÇÃO AERONÁUTICA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 15700000,
+"fim_khz": 16600000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 16600000,
+"fim_khz": 17100000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 17100000,
+"fim_khz": 17200000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 17200000,
+"fim_khz": 17300000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 17300000,
+"fim_khz": 17700000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 17700000,
+"fim_khz": 17800000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 17800000,
+"fim_khz": 18100000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 18100000,
+"fim_khz": 18400000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 18400000,
+"fim_khz": 18600000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 18600000,
+"fim_khz": 18800000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 18800000,
+"fim_khz": 19300000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 19300000,
+"fim_khz": 19700000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 19700000,
+"fim_khz": 20200000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 20200000,
+"fim_khz": 21200000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Frequências Padrão E Sinais Horários Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 21200000,
+"fim_khz": 21400000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 21400000,
+"fim_khz": 21800000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 21800000,
+"fim_khz": 22000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 22000000,
+"fim_khz": 22210000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 22210000,
+"fim_khz": 22400000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 22400000,
+"fim_khz": 22500000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 22500000,
+"fim_khz": 22550000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 22550000,
+"fim_khz": 23150000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 23150000,
+"fim_khz": 23600000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 23600000,
+"fim_khz": 24000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 24000000,
+"fim_khz": 24050000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 24050000,
+"fim_khz": 24250000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 24250000,
+"fim_khz": 24450000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 24450000,
+"fim_khz": 24650000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 24650000,
+"fim_khz": 24750000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 24750000,
+"fim_khz": 25250000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 25250000,
+"fim_khz": 25500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Frequências Padrão E Sinais Horários Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 25500000,
+"fim_khz": 27000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Frequências Padrão E Sinais Horários Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 27000000,
+"fim_khz": 27500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 27500000,
+"fim_khz": 28500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 28500000,
+"fim_khz": 29100000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 29100000,
+"fim_khz": 29500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 29500000,
+"fim_khz": 29900000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 29900000,
+"fim_khz": 30000000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 30000000,
+"fim_khz": 31000000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Frequências Padrão E Sinais Horários Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 31000000,
+"fim_khz": 31300000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Frequências Padrão E Sinais Horários Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 31300000,
+"fim_khz": 31800000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 31800000,
+"fim_khz": 32300000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 32300000,
+"fim_khz": 33000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 33000000,
+"fim_khz": 33400000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 33400000,
+"fim_khz": 34200000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 34200000,
+"fim_khz": 34700000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 34700000,
+"fim_khz": 35200000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 35200000,
+"fim_khz": 35500000,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 35500000,
+"fim_khz": 36000000,
+"servicos": [
+{
+"nome": "AUXÍLIO À METEOROLOGIA",
+"primario": true
+},
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 36000000,
+"fim_khz": 37000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 37000000,
+"fim_khz": 37500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 37500000,
+"fim_khz": 38000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 38000000,
+"fim_khz": 39500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 39500000,
+"fim_khz": 40000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 40000000,
+"fim_khz": 40500000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Exploração Da Terra Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 40500000,
+"fim_khz": 41000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Móvel",
+"primario": false
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 41000000,
+"fim_khz": 42500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL TERRESTRE",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Móvel Aeronáutico",
+"primario": false
+},
+{
+"nome": "Móvel Marítimo",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 42500000,
+"fim_khz": 43500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 43500000,
+"fim_khz": 47000000,
+"servicos": [
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 47000000,
+"fim_khz": 47200000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 47200000,
+"fim_khz": 50200000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 50200000,
+"fim_khz": 50400000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 50400000,
+"fim_khz": 51400000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Móvel Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 51400000,
+"fim_khz": 52400000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 52400000,
+"fim_khz": 52600000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 52600000,
+"fim_khz": 54250000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 54250000,
+"fim_khz": 55780000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 55780000,
+"fim_khz": 57000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 57000000,
+"fim_khz": 58200000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 58200000,
+"fim_khz": 59000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 59000000,
+"fim_khz": 59300000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 59300000,
+"fim_khz": 64000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 64000000,
+"fim_khz": 65000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 65000000,
+"fim_khz": 66000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 66000000,
+"fim_khz": 71000000,
+"servicos": [
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 71000000,
+"fim_khz": 74000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 74000000,
+"fim_khz": 76000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO",
+"primario": true
+},
+{
+"nome": "RADIODIFUSÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 76000000,
+"fim_khz": 77500000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 77500000,
+"fim_khz": 78000000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Radioastronomia",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 78000000,
+"fim_khz": 79000000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+},
+{
+"nome": "Radioastronomia",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 79000000,
+"fim_khz": 81000000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 81000000,
+"fim_khz": 81500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 81500000,
+"fim_khz": 84000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Pesquisa Espacial",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 84000000,
+"fim_khz": 86000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 86000000,
+"fim_khz": 92000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 92000000,
+"fim_khz": 94000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Fixo Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 94000000,
+"fim_khz": 94100000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Radioastronomia",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 94100000,
+"fim_khz": 95000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Fixo Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 95000000,
+"fim_khz": 100000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+},
+{
+"nome": "Fixo Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 100000000,
+"fim_khz": 102000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 102000000,
+"fim_khz": 105000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Fixo Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 105000000,
+"fim_khz": 109500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Fixo Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 109500000,
+"fim_khz": 111800000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 111800000,
+"fim_khz": 114250000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+},
+{
+"nome": "Fixo Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 114250000,
+"fim_khz": 116000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 116000000,
+"fim_khz": 122250000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 122250000,
+"fim_khz": 123000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 123000000,
+"fim_khz": 130000000,
+"servicos": [
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+},
+{
+"nome": "Radioastronomia",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 130000000,
+"fim_khz": 134000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 134000000,
+"fim_khz": 136000000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Radioastronomia",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 136000000,
+"fim_khz": 141000000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 141000000,
+"fim_khz": 148500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 148500000,
+"fim_khz": 151500000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 151500000,
+"fim_khz": 155500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 155500000,
+"fim_khz": 158500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 158500000,
+"fim_khz": 164000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 164000000,
+"fim_khz": 167000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 167000000,
+"fim_khz": 174500000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 174500000,
+"fim_khz": 174800000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 174800000,
+"fim_khz": 182000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 182000000,
+"fim_khz": 185000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 185000000,
+"fim_khz": 190000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 190000000,
+"fim_khz": 191800000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 191800000,
+"fim_khz": 200000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "ENTRE SATÉLITES",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 200000000,
+"fim_khz": 209000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 209000000,
+"fim_khz": 217000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 217000000,
+"fim_khz": 226000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 226000000,
+"fim_khz": 231500000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 231500000,
+"fim_khz": 232000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 232000000,
+"fim_khz": 235000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "Radiolocalização",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 235000000,
+"fim_khz": 238000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 238000000,
+"fim_khz": 239200000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 239200000,
+"fim_khz": 240000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 240000000,
+"fim_khz": 241000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 241000000,
+"fim_khz": 242200000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 242200000,
+"fim_khz": 244200000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 244200000,
+"fim_khz": 247200000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 247200000,
+"fim_khz": 248000000,
+"servicos": [
+{
+"nome": "RADIOLOCALIZAÇÃO",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "Radioamador",
+"primario": false
+},
+{
+"nome": "Radioamador Por Satélite",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 248000000,
+"fim_khz": 250000000,
+"servicos": [
+{
+"nome": "RADIOAMADOR",
+"primario": true
+},
+{
+"nome": "RADIOAMADOR POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "Radioastronomia",
+"primario": false
+}
+]
+},
+{
+"ini_khz": 250000000,
+"fim_khz": 252000000,
+"servicos": [
+{
+"nome": "EXPLORAÇÃO DA TERRA POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "PESQUISA ESPACIAL",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 252000000,
+"fim_khz": 265000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "MÓVEL POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "RADIONAVEGAÇÃO",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 265000000,
+"fim_khz": 275000000,
+"servicos": [
+{
+"nome": "FIXO",
+"primario": true
+},
+{
+"nome": "FIXO POR SATÉLITE",
+"primario": true
+},
+{
+"nome": "MÓVEL",
+"primario": true
+},
+{
+"nome": "RADIOASTRONOMIA",
+"primario": true
+}
+]
+},
+{
+"ini_khz": 275000000,
+"fim_khz": 3000000000,
+"servicos": [
+{
+"nome": "(Não Atribuída)",
+"primario": false
+}
+]
+}
+]
+}

@@ -37,6 +37,12 @@ engine/
   cerj-macros.sty         macros do curso: frequências, indicativos, caixas
 img/
   cerj-logo.png           emblema do CERJ
+  espectro-brasil.pdf     espectro brasileiro com as faixas de radioamador
+  espectro-brasil.tex     fonte da figura acima (gerada por tools/espectro.py)
+tools/
+  espectro.py             gera a figura do espectro a partir dos dados da Anatel
+dados/
+  pdff-brasil.json        plano de faixas da Anatel (PDFF), coluna Brasil
 ```
 
 ## Modelos de slide incluídos
