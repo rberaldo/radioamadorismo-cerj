@@ -95,9 +95,8 @@ quando usados como fundo em projetores.
 | `cerjYellow` | `#F4FB95` | fundo da caixa `atencao` |
 | `cerjInk` | `#1D2238` | texto |
 
-**Logo.** O emblema em `img/cerj-logo.png` tem só 150 px, que é a versão
-publicada no site do CERJ. Para melhorar a nitidez, substitua o arquivo por
-uma versão em alta resolução ou vetorial (PDF) com o mesmo nome de base.
+**Logo.** `img/cerj-logo.png` é o emblema em alta resolução (2858 × 2378 px,
+fundo transparente).
 
 **Imagens.** Coloque suas fotos em `img/` e troque os nomes
 `example-image-*` usados nos slides de exemplo.
