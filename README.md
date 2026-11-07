@@ -80,20 +80,27 @@ Macros de texto:
 
 ## Personalização
 
-**Cores.** Ficam em `engine/cerj-cores.sty`. As cores
-`cerjBlue`, `cerjGreen` e `cerjYellow` foram medidas no emblema oficial. As
-demais são derivadas delas, porque o azul e o verde puros do emblema ofuscam
-quando usados como fundo em projetores.
+**Cores.** Ficam em `engine/cerj-cores.sty` e vêm de duas fontes: o papel
+timbrado oficial do CERJ (Azul CERJ `#003366` e seus tons misturados ao
+branco) e o emblema (cores medidas nos pixels de `img/cerj-logo.png`). O verde
+e o creme do emblema são claros demais para texto sobre branco, por isso o
+texto usa versões escurecidas.
 
-| Nome | Hex | Uso |
-|---|---|---|
-| `cerjNavy` | `#131A66` | fundos da capa, seções e título dos slides |
-| `cerjBlue` | `#0008FF` | azul do emblema, links |
-| `cerjRoyal` | `#2433C8` | blocos de exemplo |
-| `cerjGreen` | `#3CEB2E` | barra de progresso, subtítulo da capa |
-| `cerjGreenDark` | `#2A9A22` | marcadores, `\alert` |
-| `cerjYellow` | `#F4FB95` | fundo da caixa `atencao` |
-| `cerjInk` | `#1D2238` | texto |
+| Nome | Hex | Origem | Uso |
+|---|---|---|---|
+| `cerjAzul` (= `cerjNavy`) | `#003366` | papel timbrado | fundos da capa, seções e título dos slides |
+| `cerjAzul80` (= `cerjRoyal`) | `#335C85` | papel timbrado | título dos blocos de exemplo |
+| `cerjAzul60` | `#6685A3` | papel timbrado | |
+| `cerjAzul40` | `#99ADC2` | papel timbrado | contornos |
+| `cerjAzul20` | `#CCD6E0` | papel timbrado | texto claro sobre o azul, barra de progresso |
+| `cerjAzul10` | `#E6EBF0` | papel timbrado | fundo dos blocos e da caixa `regulamento` |
+| `cerjBlue` | `#3C4398` | emblema | links |
+| `cerjGreen` | `#44AC6A` | emblema | barra de progresso, subtítulo da capa |
+| `cerjGreenVivid` | `#11B255` | emblema | |
+| `cerjYellow` | `#F6EFAB` | emblema | fundo da caixa `atencao` |
+| `cerjGreenDark` | `#338150` | derivada | marcadores, `\alert` |
+| `cerjInk` | `#001F3D` | derivada | texto |
+| `cerjPaper` | `#FAFAFA` | derivada | fundo dos slides (quase branco, ofusca menos no projetor) |
 
 **Logo.** `img/cerj-logo.png` é o emblema em alta resolução (2858 × 2378 px,
 fundo transparente).
