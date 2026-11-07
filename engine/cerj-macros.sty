@@ -124,14 +124,17 @@
       \clip (current page.south west) rectangle (current page.north east);
       \node[inner sep=0pt] at (current page.center)
         {\includegraphics[#1]{#2}};
+      % A faixa passa 1pt das bordas esquerda, inferior e direita (o \clip
+      % corta o excesso): encosta nos cantos sem deixar fresta de anti-aliasing.
+      % outer sep=0pt: sem ele a âncora fica fora da área pintada.
       \node[
-        anchor=south west,
+        anchor=south west, outer sep=0pt,
         fill=cerjNavy, fill opacity=0.85,
         text opacity=1, text=white,
         text width=\dimexpr\paperwidth-20pt\relax,
-        inner xsep=10pt, inner ysep=8pt,
+        inner xsep=11pt, inner ysep=8pt,
         align=left,
-      ] at (current page.south west) {#3};
+      ] at ([shift={(-1pt,-1pt)}]current page.south west) {#3};
     \end{tikzpicture}%
   }%
 }
