@@ -2,7 +2,8 @@
 % Copyright (c) 2026 Rafael Beraldo
 %% cerj-macros.sty
 %% Macros de conteúdo para o curso: indicativos, frequências, caixas de
-%% destaque (Dica / Atenção / Regulamento) e slide de foto em tela cheia.
+%% destaque (Dica / Atenção / Regulamento), foto com legenda e slide de foto
+%% em tela cheia.
 %% Depende das cores definidas em beamerthemecerj.sty.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{cerj-macros}[2026/11/07 v0.1 Macros do curso de radioamadorismo CERJ]
@@ -88,6 +89,23 @@
   colbacktitle=cerjNavy,
   title={\faGavel\ Regulamento},
   #1
+}
+
+% ---------------------------------------------------------------------------
+% Foto com legenda
+% ---------------------------------------------------------------------------
+% \legenda{texto}                      legenda discreta sob qualquer coisa
+% \foto{arquivo}{legenda}              foto na largura da coluna + legenda
+% \foto[height=4cm]{arquivo}{legenda}  opções do \includegraphics
+% \foto{arquivo}{}                     sem legenda
+\colorlet{cerjMuted}{cerjInk!60!cerjPaper}
+\newcommand{\legenda}[1]{%
+  \par\vspace{0.3em}%
+  {\scriptsize\color{cerjMuted}#1\par}%
+}
+\newcommand{\foto}[3][width=\linewidth]{%
+  \includegraphics[#1]{#2}%
+  \if\relax\detokenize{#3}\relax\else\legenda{#3}\fi
 }
 
 % ---------------------------------------------------------------------------

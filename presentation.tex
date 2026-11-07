@@ -9,7 +9,8 @@
 % Estrutura:  engine/beamerthemecerj.sty  logo, páginas de título/seção
 %             engine/cerj-cores.sty       paleta CERJ
 %             engine/cerj-macros.sty      \freq, \indicativo, caixas dica/atencao/
-%                                         regulamento, \cerjfullimage
+%                                         regulamento, \foto, \legenda,
+%                                         \cerjfullimage
 %             img/                        imagens (cerj-logo.png e suas fotos)
 % =============================================================================
 \documentclass[aspectratio=169, 11pt]{beamer}
@@ -78,10 +79,8 @@
       \end{itemize}
     \end{column}
     \begin{column}{0.4\textwidth}
-      % Troque example-image-a por img/sua-foto.jpg
-      \includegraphics[width=\linewidth]{example-image-a}
-      \par\vspace{0.3em}
-      {\scriptsize\color{cerjInk!60!cerjPaper} Legenda da foto}
+      % Troque example-image-a pelo nome da sua foto em img/
+      \foto{example-image-a}{Legenda da foto}
     \end{column}
   \end{columns}
 \end{frame}

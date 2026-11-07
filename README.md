@@ -34,7 +34,7 @@ latexmkrc                 configuração do latexmk (LuaLaTeX, saída em build/)
 engine/
   beamerthemecerj.sty     tema: logo, capa, páginas de seção, rodapé
   cerj-cores.sty          paleta CERJ (usada pelo tema e pelas figuras)
-  cerj-macros.sty         macros do curso: frequências, indicativos, caixas
+  cerj-macros.sty         macros do curso: frequências, indicativos, caixas, fotos
 img/
   cerj-logo.png           emblema do CERJ
   espectro-brasil.pdf     espectro brasileiro com as faixas de radioamador
@@ -55,7 +55,7 @@ dados/
 | Sumário | `\tableofcontents` |
 | Página de seção | automática a cada `\section{...}` |
 | Lista com revelação progressiva | `\begin{itemize}[<+->]` |
-| Duas colunas, texto e imagem | ambiente `columns` |
+| Duas colunas, texto e imagem | ambiente `columns` com `\foto{arquivo}{legenda}` |
 | Foto em tela cheia com legenda | `\cerjfullimage{arquivo}{legenda}` |
 | Tabela | `tabular` com `booktabs` |
 | Blocos | `block`, `alertblock`, `exampleblock` |
@@ -71,6 +71,11 @@ Macros de texto:
   144 a 148 MHz.
 - `\indicativo{PY1XXX}` imprime um indicativo de chamada em monoespaçado.
 - `\destaque{termo}` destaca um termo em verde, sem efeito de overlay.
+- `\foto{arquivo}{legenda}` põe uma foto na largura da coluna com a legenda
+  embaixo. Aceita opções do `\includegraphics` (`\foto[height=4cm]{...}{...}`);
+  com `{}` no lugar da legenda, sai só a foto.
+- `\legenda{texto}` escreve uma legenda discreta sob qualquer coisa (figura,
+  tabela).
 
 ## Personalização
 
