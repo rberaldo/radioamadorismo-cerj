@@ -23,6 +23,10 @@
 % (\url sozinho não expande a macro e escreveria "\linkCERJ")
 \newcommand{\mostrarlink}[1]{\expandafter\url\expandafter{#1}}
 
+% Link nos slides, com o ícone de "abre fora": \linkexterno{\linkCERJ}{cerj.org.br}
+% (nas referências ABNT, use \mostrarlink, sem ícone)
+\newcommand{\linkexterno}[2]{\href{#1}{\faExternalLink*~#2}}   % ~: ícone não separa do texto
+
 % URLs longos quebram em qualquer caractere (senão vazam do slide)
 \RequirePackage{xurl}
 
@@ -146,6 +150,11 @@
   \par\vspace{0.3em}%
   {\scriptsize\color{cerjMuted}#1\par}%
 }
+% Comentário com a fonte do \legenda (pequena e acinzentada), onde for escrito:
+%   texto com marca\asterisco ...  \comentario{explicação}  ->  "* explicação"
+\newcommand{\asterisco}{\textsuperscript{*}}
+% (fecha o parágrafo dentro do grupo, para o espaço entre linhas ser o da letra pequena)
+\newcommand{\comentario}[1]{{\scriptsize\color{cerjMuted}* #1\par}}
 \newcommand{\foto}[3][width=\linewidth]{%
   \includegraphics[#1]{#2}%
   \if\relax\detokenize{#3}\relax\else\legenda{#3}\fi

@@ -97,6 +97,11 @@ Macros de texto:
   com `{}` no lugar da legenda, sai só a foto.
 - `\legenda{texto}` escreve uma legenda discreta sob qualquer coisa (figura,
   tabela).
+- `\linkexterno{\linkX}{texto}` faz um link com o ícone de "abre fora"; os
+  endereços ficam no bloco de links do preâmbulo (`\linkCERJ` etc.). Nas
+  referências, `\mostrarlink{\linkX}` mostra o próprio endereço, sem ícone.
+- `\asterisco` marca um ponto do texto com um * e `\comentario{texto}` escreve
+  "* texto" ali mesmo, com a fonte do `\legenda` (a posição fica por sua conta).
 
 ## Personalização
 
