@@ -1,0 +1,77 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+% !TEX program = lualatex
+% Como se tornar radioamador: os três passos da Anatel (habilitação, outorga,
+% licenciamento), num fluxograma horizontal, revelado um passo por página.
+% Fonte: gov.br/anatel > Radioamador (Res. 777/2025), consultado em 8/11/2026.
+% Compilada pelo latexmkrc para img/licenca.pdf; a apresentação inclui com \figurapassos{licenca}{3}.
+% Acha engine/ compilando da raiz ou de dentro de figuras/
+\makeatletter\def\input@path{{engine/}{../engine/}}\makeatother
+\documentclass{cerj-figura}
+
+\tikzset{
+  passo/.style={draw=cerjNavy40, fill=cerjNavy10, rounded corners=3pt, inner sep=5pt,
+    text width=2.85cm, minimum height=2.5cm, align=left, font=\scriptsize, text=cerjInk},
+  ponta/.style={draw=cerjNavy40, fill=cerjPaper, rounded corners=3pt, inner sep=4pt,
+    text width=1.2cm, minimum height=2.5cm, align=center, font=\scriptsize, text=cerjInk},
+  titulo/.style={font=\small\bfseries, text=cerjNavy},
+  numero/.style={circle, fill=cerjOrange, text=white, font=\scriptsize\bfseries,
+    inner sep=0pt, minimum size=4.2mm},
+  seta/.style={-{Stealth[length=2.5mm]}, line width=1pt, draw=cerjNavy},
+  nota/.style={font=\scriptsize, text=cerjMuted, align=center, text width=4.2cm},
+  apagado/.style={opacity=.18},
+}
+
+% \licenca{n}: mostra os passos até n (os seguintes ficam esmaecidos)
+\newcommand{\licenca}[1]{%
+% Todos os nós são sempre desenhados (os futuros, esmaecidos): as 3 páginas têm o mesmo tamanho
+\begin{tikzpicture}[node distance=.3cm]
+
+  \node[ponta] (estudo) at (.65,0) {\faBook\\[2pt]\textbf{Estude}\\ apostilas da LABRE e cursos};
+
+  \node[passo, right=of estudo] (p1) {%
+    \textbf{Habilitação}\\[1pt]
+    Prova \alertinline{online e gratuita} da Anatel (sistema SEC, login gov.br):
+    3~matérias, 51\,\% em cada\\[3pt]
+    Sai o \textbf{COER}, que não vence};
+  \node[numero] at (p1.north west) {1};
+
+  \node[passo, right=of p1, \ifnum#1<2 apagado\fi] (p2) {%
+    \textbf{Outorga}\\[1pt]
+    No Mosaico: Serviço de Interesse Restrito, código~302\\[3pt]
+    R\$~20, uma vez\\[3pt]
+    Espere o ato sair no Diário Oficial};
+  \node[numero, \ifnum#1<2 apagado\fi] at (p2.north west) {2};
+
+  \node[passo, right=of p2, \ifnum#1<3 apagado\fi] (p3) {%
+    \textbf{Licenciamento}\\[1pt]
+    No MMAR (Mosaico): cadastre a estação e pague as taxas\\[3pt]
+    $\approx$ R\$~40 na licença (10~anos) e $\approx$ R\$~10 por ano\\[3pt]
+    Recebe o \textbf{indicativo}};
+  \node[numero, \ifnum#1<3 apagado\fi] at (p3.north west) {3};
+
+  \node[ponta, right=of p3, \ifnum#1<3 apagado\fi] (ar) {{\large\faBroadcastTower}\\[3pt]\textbf{No ar!}\\ \indicativo{PU1XXX}};
+
+  \draw[seta] (estudo) -- (p1);
+  \draw[seta, \ifnum#1<2 apagado\fi] (p1) -- (p2);
+  \draw[seta, \ifnum#1<3 apagado\fi] (p2) -- (p3);
+  \draw[seta, \ifnum#1<3 apagado\fi] (p3) -- (ar);
+
+  % Só o passo 1 é obrigatório
+  \draw[seta, dashed, draw=cerjGreenDark] (p1.south) -- ++(0,-.45)
+    node[nota, below, text=cerjGreenDark] {Com o COER você já pode operar\\
+      a estação de outro radioamador};
+  \node[nota, below=.55cm of p3.south, text width=6cm, \ifnum#1<2 apagado\fi]
+    {Os passos 2 e 3 são para quem quer a \textbf{própria estação} e um indicativo.\\
+     Tudo online, no gov.br/anatel.};
+\end{tikzpicture}}
+
+% Destaque dentro do nó (o \alert é do beamer)
+\newcommand{\alertinline}[1]{\textcolor{cerjOrange}{\bfseries #1}}
+\newcommand{\indicativo}[1]{{\ttfamily #1}}
+
+\begin{document}
+\licenca{1}
+\licenca{2}
+\licenca{3}
+\end{document}
