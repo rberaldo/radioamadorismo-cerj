@@ -23,6 +23,24 @@
 % (\url sozinho não expande a macro e escreveria "\linkCERJ")
 \newcommand{\mostrarlink}[1]{\expandafter\url\expandafter{#1}}
 
+% URLs longos quebram em qualquer caractere (senão vazam do slide)
+\RequirePackage{xurl}
+
+
+% ---------------------------------------------------------------------------
+% Referências (ABNT, sistema autor-data)
+% ---------------------------------------------------------------------------
+% Cada entrada: \bibitem[ANATEL, 2017]{chave} texto da referência.
+% \cite{chave} imprime "(ANATEL, 2017)"; \cite[p.~3]{chave}, "(ANATEL, 2017, p. 3)".
+% Na lista, sem rótulo nem recuo, alinhada à esquerda, como pede a ABNT.
+\setbeamertemplate{bibliography item}{}
+% Letra menor, sem justificar, e sem o recuo do rótulo (labelsep) que sobraria
+\AtBeginEnvironment{thebibliography}{\footnotesize\raggedright\setlength{\labelsep}{0pt}}
+\setbeamertemplate{frametitle continuation}{}   % "Referências", não "Referências I"
+\makeatletter
+\renewcommand{\@cite}[2]{(#1\if@tempswa , #2\fi)}
+\makeatother
+
 
 % ---------------------------------------------------------------------------
 % Abreviações
