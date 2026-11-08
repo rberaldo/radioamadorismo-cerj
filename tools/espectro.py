@@ -3,9 +3,10 @@
 """Gera img/espectro-brasil.pdf: o espectro brasileiro inteiro, de 3 kHz a
 300 GHz, com as faixas do radioamador em destaque.
 
-A figura é um documento TikZ à parte (img/espectro-brasil.tex, classe
+A figura é um documento TikZ à parte (figuras/espectro-brasil.tex, classe
 standalone) compilado com LuaLaTeX. A apresentação só inclui o PDF pronto,
-sem recompilar o desenho:  \includegraphics{espectro-brasil}
+sem recompilar o desenho:  \figura{espectro-brasil}
+(o latexmkrc também recompila o PDF sempre que o .tex muda).
 
 Os dados vêm do PDFF da Anatel (coluna Brasil), salvos em dados/pdff-brasil.json.
 
@@ -30,7 +31,8 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 DADOS = RAIZ / "dados" / "pdff-brasil.json"
-SAIDA = RAIZ / "img" / "espectro-brasil.tex"
+SAIDA = RAIZ / "figuras" / "espectro-brasil.tex"
+PDF = RAIZ / "img" / "espectro-brasil.pdf"
 
 # --- Geometria (cm) ----------------------------------------------------------
 LARGURA = 11.4     # largura de cada barra (uma década)
@@ -157,13 +159,9 @@ def gerar():
     # Mesma fonte (Fira Sans, do metropolis), tamanhos (11pt) e cores do tema:
     # incluído sem escala, o PDF fica idêntico a um desenho feito no slide.
     p(r"\documentclass[11pt, border=2pt]{standalone}")
-    p(r"% Acha engine/ (cerj-cores.sty) compilando da raiz ou de dentro de img/")
+    p(r"% Acha engine/ compilando da raiz ou de dentro de figuras/")
     p(r"\makeatletter\def\input@path{{engine/}{../engine/}}\makeatother")
-    p(r"\usepackage{fontspec}")
-    p(r"\setsansfont[BoldFont={Fira Sans}]{Fira Sans Light}")
-    p(r"\renewcommand{\familydefault}{\sfdefault}")
-    p(r"\usepackage{tikz}")
-    p(r"\usepackage{cerj-cores}")
+    p(r"\usepackage{cerj-figuras}")
     p(r"\begin{document}")
     p(r"\begin{tikzpicture}[x=1cm, y=1cm, font=\sffamily]")
     p(r"  \tikzset{amP/.style={fill=cerjGreenDark},"
@@ -255,7 +253,7 @@ def gerar():
 
 def compilar():
     """Compila o .tex numa pasta temporária e copia só o PDF para img/."""
-    pdf = SAIDA.with_suffix(".pdf")
+    pdf = PDF
     env = dict(os.environ, TEXINPUTS=f"{RAIZ / 'engine'}//:")
     with tempfile.TemporaryDirectory() as tmp:
         r = subprocess.run(
@@ -264,7 +262,7 @@ def compilar():
             cwd=RAIZ, env=env, capture_output=True, text=True)
         if r.returncode != 0:
             sys.exit(r.stdout[-2000:] + "\nFalha ao compilar " + str(SAIDA))
-        shutil.copy(Path(tmp) / pdf.name, pdf)
+        shutil.copy(Path(tmp) / SAIDA.with_suffix(".pdf").name, pdf)
     print(f"{pdf.relative_to(RAIZ)} compilado")
 
 

@@ -24,7 +24,8 @@ latexmk -C       # apaga tudo em build/, inclusive o PDF
 ```
 
 O arquivo `latexmkrc` configura o LuaLaTeX, a pasta de saída `build/` e
-acrescenta `engine/` ao caminho de busca do TeX.
+acrescenta `engine/` ao caminho de busca do TeX. Ele também compila as figuras
+TikZ de `figuras/` (veja abaixo).
 
 ## Estrutura
 
@@ -35,15 +36,33 @@ engine/
   beamerthemecerj.sty     tema: logo, capa, páginas de seção, rodapé
   cerj-cores.sty          paleta CERJ (usada pelo tema e pelas figuras)
   cerj-macros.sty         macros do curso: frequências, indicativos, caixas, fotos
-img/
+  cerj-figuras.sty        preâmbulo comum das figuras TikZ (fonte, cores, logos)
+figuras/                  fontes TikZ, uma figura por arquivo (classe standalone)
+  espectro-brasil.tex     espectro brasileiro (gerado por tools/espectro.py)
+img/                      só imagens prontas: fotos e os PDFs das figuras
   cerj-logo.png           emblema do CERJ
-  espectro-brasil.pdf     espectro brasileiro com as faixas de radioamador
-  espectro-brasil.tex     fonte da figura acima (gerada por tools/espectro.py)
+  *.pdf                   saída de figuras/*.tex (não edite: é regerada)
 tools/
   espectro.py             gera a figura do espectro a partir dos dados da Anatel
 dados/
   pdff-brasil.json        plano de faixas da Anatel (PDFF), coluna Brasil
 ```
+
+## Figuras TikZ
+
+Cada desenho TikZ fica num arquivo próprio em `figuras/`, com a classe
+`standalone` e o preâmbulo comum `engine/cerj-figuras.sty` (mesma fonte, cores
+e tamanhos do tema). O `latexmkrc` compila cada `figuras/X.tex` para
+`img/X.pdf`, só quando a figura mudou, e a apresentação inclui o PDF pronto.
+Assim a apresentação não recompila os desenhos a cada passada.
+
+- `\figura{X}` inclui `img/X.pdf` sem escala.
+- `\figurapassos{X}{n}` inclui uma figura de *n* páginas, uma por passo do
+  slide (página *k* no passo *k*). Na fonte, desenhe cada passo como uma
+  página.
+- Para uma figura nova, crie `figuras/X.tex` copiando o cabeçalho de uma das
+  existentes e use `\figura{X}` no slide. O `latexmk -pvc` percebe quando você
+  salva a figura e recompila tudo.
 
 ## Modelos de slide incluídos
 

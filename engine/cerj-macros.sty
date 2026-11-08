@@ -41,13 +41,37 @@
 \setcitestyle{authoryear, round, aysep={,}, yysep={;}, notesep={, }}
 % O beamer carrega o hyperref com implicit=false, que transforma esta macro
 % num stub vazio e engole o ", " e o " (" entre autor e ano. Devolve o texto.
-\makeatletter\def\hyper@natlinkbreak#1#2{#1}\makeatother
+\def\hyper@natlinkbreak#1#2{#1}
 \renewcommand{\bibsection}{}                    % o título vem do frame
 \setlength{\bibhang}{0pt}                       % sem recuo pendente
 \setbeamertemplate{bibliography item}{}
 % Letra menor, sem justificar, e sem o recuo do rótulo (labelsep) que sobraria
 \AtBeginEnvironment{thebibliography}{\footnotesize\raggedright\setlength{\labelsep}{0pt}}
 \setbeamertemplate{frametitle continuation}{}   % "Referências", não "Referências I"
+
+
+% ---------------------------------------------------------------------------
+% Figuras TikZ (fontes em figuras/, PDFs em img/, compilados pelo latexmkrc)
+% ---------------------------------------------------------------------------
+% \figura[opções]{nome}: inclui img/nome.pdf, sem escala para manter a fonte
+% do tamanho do slide. Também abre figuras/nome.tex (sem ler nada) só para o
+% arquivo entrar no .fls como dependência: assim o latexmk -pvc recompila
+% quando a figura muda. (\IfFileExists não serve: não abre o arquivo.)
+\newread\cerj@dependencia
+\newcommand{\cerj@registrafonte}[1]{%
+  \openin\cerj@dependencia=figuras/#1.tex\relax\closein\cerj@dependencia}
+\newcommand{\figura}[2][]{\cerj@registrafonte{#2}\includegraphics[#1]{#2}}
+
+% \figurapassos{nome}{n}: figura de n páginas, uma por passo do slide
+% (página k no passo k; a última fica até o fim do slide).
+\newcommand{\figurapassos}[2]{%
+  \cerj@registrafonte{#1}%
+  \foreach \cerj@passo in {1,...,#2}{%
+    \ifnum\cerj@passo<#2
+      \only<\cerj@passo>{\includegraphics[page=\cerj@passo]{#1}}%
+    \else
+      \only<\cerj@passo->{\includegraphics[page=\cerj@passo]{#1}}%
+    \fi}}
 
 
 % ---------------------------------------------------------------------------

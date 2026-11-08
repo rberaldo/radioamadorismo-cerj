@@ -3,13 +3,9 @@
 % Fonte: Anatel — Plano de Atribuição, Destinação e Distribuição de Faixas de Frequências no Brasil (PDFF), Resolução Anatel nº 789, de 06/07/2026; coluna Brasil
 % Obtido em 2026-11-07: https://sistemas.anatel.gov.br/se/modulos/plano/consulta
 \documentclass[11pt, border=2pt]{standalone}
-% Acha engine/ (cerj-cores.sty) compilando da raiz ou de dentro de img/
+% Acha engine/ compilando da raiz ou de dentro de figuras/
 \makeatletter\def\input@path{{engine/}{../engine/}}\makeatother
-\usepackage{fontspec}
-\setsansfont[BoldFont={Fira Sans}]{Fira Sans Light}
-\renewcommand{\familydefault}{\sfdefault}
-\usepackage{tikz}
-\usepackage{cerj-cores}
+\usepackage{cerj-figuras}
 \begin{document}
 \begin{tikzpicture}[x=1cm, y=1cm, font=\sffamily]
   \tikzset{amP/.style={fill=cerjGreenDark}, amS/.style={fill=cerjGreen!55!cerjPaper}, rd/.style={fill=cerjBlue!35!cerjPaper}, outro/.style={fill=cerjAzul10}, rot/.style={font=\sffamily\tiny, inner sep=1pt}, ham/.style={rot, text=cerjGreenDark, anchor=south}}
