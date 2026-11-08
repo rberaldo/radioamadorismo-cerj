@@ -66,8 +66,12 @@
 \setbeamercolor{section title}{fg=white}
 \setbeamercolor{subsection title}{fg=cerjAzul20}
 
-% Links
-\hypersetup{colorlinks=true, linkcolor=., urlcolor=cerjBlue, citecolor=cerjGreenDark}
+% Links: verde escuro sobre o fundo claro; nos slides [standout] (fundo azul),
+% o verde claro do emblema, que o verde escuro ficaria ilegível. O \hypersetup
+% vale só dentro do grupo que o metropolis abre para o standout.
+\hypersetup{colorlinks=true, linkcolor=., urlcolor=cerjGreenDark, citecolor=cerjGreenDark}
+\apptocmd{\KV@beamerframe@standout}{\hypersetup{urlcolor=cerjGreen, citecolor=cerjGreen}}{}%
+  {\PackageWarning{beamerthemecerj}{Não deu para ajustar a cor dos links no standout}}
 
 % ---------------------------------------------------------------------------
 % Logotipo

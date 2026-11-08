@@ -113,11 +113,11 @@ texto usa versões escurecidas.
 | `cerjAzul40` | `#99ADC2` | papel timbrado | contornos |
 | `cerjAzul20` | `#CCD6E0` | papel timbrado | texto claro sobre o azul, barra de progresso |
 | `cerjAzul10` | `#E6EBF0` | papel timbrado | fundo dos blocos e da caixa `regulamento` |
-| `cerjBlue` | `#3C4398` | emblema | links |
-| `cerjGreen` | `#44AC6A` | emblema | barra de progresso, subtítulo da capa |
+| `cerjBlue` | `#3C4398` | emblema | texto dos blocos de exemplo |
+| `cerjGreen` | `#44AC6A` | emblema | barra de progresso, subtítulo da capa, links nos slides de fundo azul |
 | `cerjGreenVivid` | `#11B255` | emblema | |
 | `cerjYellow` | `#F6EFAB` | emblema | fundo da caixa `atencao` |
-| `cerjGreenDark` | `#338150` | derivada | marcadores, `\alert` |
+| `cerjGreenDark` | `#338150` | derivada | marcadores, `\alert`, links e citações |
 | `cerjInk` | `#001F3D` | derivada | texto |
 | `cerjPaper` | `#FAFAFA` | derivada | fundo dos slides (quase branco, ofusca menos no projetor) |
 
