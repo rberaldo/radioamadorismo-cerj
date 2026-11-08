@@ -30,16 +30,24 @@
 % ---------------------------------------------------------------------------
 % Referências (ABNT, sistema autor-data)
 % ---------------------------------------------------------------------------
-% Cada entrada: \bibitem[ANATEL, 2017]{chave} texto da referência.
-% \cite{chave} imprime "(ANATEL, 2017)"; \cite[p.~3]{chave}, "(ANATEL, 2017, p. 3)".
+% Citações com natbib (autor-data). Cada entrada:
+%   \bibitem[Maxwell(2000)]{maxwell2000} texto da referência
+% \citep{maxwell2000}         (Maxwell, 2000)
+% \citet{maxwell2000}         Maxwell (2000)
+% \citep[p.~3]{maxwell2000}   (Maxwell, 2000, p. 3)
+% Atenção: no natbib, \cite equivale a \citet, não a \citep.
 % Na lista, sem rótulo nem recuo, alinhada à esquerda, como pede a ABNT.
+\RequirePackage{natbib}
+\setcitestyle{authoryear, round, aysep={,}, yysep={;}, notesep={, }}
+% O beamer carrega o hyperref com implicit=false, que transforma esta macro
+% num stub vazio e engole o ", " e o " (" entre autor e ano. Devolve o texto.
+\makeatletter\def\hyper@natlinkbreak#1#2{#1}\makeatother
+\renewcommand{\bibsection}{}                    % o título vem do frame
+\setlength{\bibhang}{0pt}                       % sem recuo pendente
 \setbeamertemplate{bibliography item}{}
 % Letra menor, sem justificar, e sem o recuo do rótulo (labelsep) que sobraria
 \AtBeginEnvironment{thebibliography}{\footnotesize\raggedright\setlength{\labelsep}{0pt}}
 \setbeamertemplate{frametitle continuation}{}   % "Referências", não "Referências I"
-\makeatletter
-\renewcommand{\@cite}[2]{(#1\if@tempswa , #2\fi)}
-\makeatother
 
 
 % ---------------------------------------------------------------------------
