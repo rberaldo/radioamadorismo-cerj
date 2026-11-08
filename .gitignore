@@ -15,3 +15,5 @@ build/
 notes.org
 # Arquivos de trava do Emacs
 .#*
+# Cache do Python (tools/)
+__pycache__/

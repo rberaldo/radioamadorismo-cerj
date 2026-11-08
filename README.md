@@ -45,6 +45,9 @@ img/                      só imagens prontas: fotos e os PDFs das figuras
   *.pdf                   saída de figuras/*.tex (não edite: é regerada)
 tools/
   espectro.py             gera a figura do espectro a partir dos dados da Anatel
+  relevo.py               funções comuns dos estudos de alcance (relevo, perfis, visada)
+  sempre_vivas.py         estudo de alcance no PN das Sempre-Vivas (img/sempre-vivas-alcance.pdf)
+  caledonia.py            alcance da PY1MAC, no alto da Caledônia (img/caledonia-alcance.pdf)
 dados/
   pdff-brasil.json        plano de faixas da Anatel (PDFF), coluna Brasil
 ```
