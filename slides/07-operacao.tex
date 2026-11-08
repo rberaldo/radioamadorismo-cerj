@@ -1,0 +1,141 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+% Parte 5 (fim): operação no grupo, com o mundo, repetidoras e protocolo
+% Incluído por presentation.tex; compile a partir dele.
+
+\begin{frame}{Comunicação entre o grupo ou a cordada}
+  \textbf{Simplex}: comunicação direta, na mesma frequência, sem repetidora. Só funciona se houver \alert{linha de visada} entre os dois rádios.
+
+  \medskip
+  \begin{itemize}
+  \item Os rádios vão \alert{nas pontas}: com quem abre e com quem cerra a fila
+  \item Se o grupo se dividir, cada parte leva um rádio
+  \item Todos na \alert{na mesma frequência}, combinada antes de sair e gravado na memória
+  \end{itemize}
+
+  \medskip
+  \begin{atencao}
+    Dois rádios lado a lado são inúteis: quem está junto conversa sem rádio.
+  \end{atencao}
+\end{frame}
+
+\begin{frame}{Comunicação com o mundo}
+  \textbf{Frequência Nacional de Chamada (FNC)}: \alert<1>{\freq{146,520}, em simplex}. Chame, estabeleça contato e mude de frequência; fique sempre ouvindo, para casos de emergência.
+
+  \pause
+  \medskip
+  \textbf{Repetidora}: fica no alto de um morro, recebe na \alert{entrada} e retransmite na
+  \alert{saída}. Assim, quem não se enxerga consegue conversar.
+
+  \smallskip
+  \centering
+  \figura{repetidora}
+\end{frame}
+
+\cerjfullimage{PN-Sempre-Vivas}{%
+  \usebeamerfont{frametitle} TODO: Foto do Caledônia\par
+  \small Atribuição da foto}
+
+\begin{frame}{Exemplos de repetidoras para o PE Três Picos}
+  \centering
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{@{}lll@{}}
+    \toprule
+                           & \textbf{PY1MAC }   & \textbf{PY1ABA} \\[1ex]
+    Local                  & Pico da Caledônia* & Médio Caledônia* \\
+    Saída (você ouve)      & \freq{145,350}     & \freq{147,030} \\
+    Entrada (você fala)    & \freq{144,750}     & \freq{147,630} \\
+    Deslocamento (offset)  & \freq{-0,6}        & \freq{+0,6} \\
+    Subtom                 & nenhum             & \qty{88,5}{\hertz} \\
+    \bottomrule
+  \end{tabular}
+
+  \medskip
+  \raggedright
+  \begin{itemize}
+  \item Você \alert{ouve na saída} e \alert{fala na entrada}: o rádio troca sozinho, pelo offset
+  \item O \alert{subtom} vai junto com a sua voz; sem ele, a PY1ABA não abre
+  \end{itemize}
+  \vfill\raggedleft
+  \comentario{Fonte: RepeaterBook; localização de PY1MAC inferida; PY1ABA no Médio Caledônia segundo listas da LABRE-RJ.}
+\end{frame}
+
+% Estudo de alcance: gerado por tools/caledonia.py (relevo Copernicus, picos do OpenStreetMap)
+\begin{frame}{Até onde chega a PY1MAC?}
+  \centering
+  \includegraphics{caledonia-alcance}
+\end{frame}
+
+\begin{frame}{Como encontrar repetidoras}
+  \begin{columns}
+    \column{0.35\textwidth}
+    Repetidoras podem ser encontradas no site ou no aplicativo Repeater Book: \linkexterno{\linkRepeaterBook}{repeaterbook.com}.
+
+    \column{0.65\textwidth}
+    \foto[height=5cm]{Repeater-Book-RJ}{O Repeater Book permite a descoberta, o cadastro e a atualização de repetidoras. O site também exporta listas prontas para o CHIRP. Na imagem, vê-se a \indicativo{PY1LAG}, repetidora em Teresópolis, RJ.}
+  \end{columns}
+\end{frame}
+
+% Protocolo de Áreas Remotas, com base em Salvatti (2024, seção 8.3)
+\begin{frame}{Protocolo de operação em áreas remotas}
+  \begin{atencao}
+   \alert{Conheça o seu equipamento} antes de precisar dele!
+  \end{atencao}
+
+  \pause
+  Para poupar bateria numa emergência, ligue o rádio só quando há mais chance de alguém ouvir
+  \citep{salvatti2024}:
+
+  \medskip
+  \begin{enumerate}
+  \item Se puder, suba ao ponto mais alto, numa clareira ou com o horizonte desobstruído
+  \item Sintonize a FNC, \freq{146,520}, ou o canal 9 da RUG, \freq{462,6625}; melhor ainda se houver uma repetidora ao alcance
+  \item Ligue o rádio nas \alert{horas cheias}, escute por pelo menos 15 minutos e desligue
+  \end{enumerate}
+
+  \smallskip
+  \comentario{Os 15 minutos são o pior caso: com bateria extra ou power bank, dá para escutar por dias.}
+\end{frame}
+
+\begin{frame}{Protocolo de áreas remotas: pedido de socorro}
+  \begin{enumerate}
+  \setcounter{enumi}{4}
+  \item Para pedir socorro, diga:
+  \end{enumerate}
+
+  \begin{alertblock}{Pedido de socorro}
+    \centering
+    ``\textbf{Preciso de ajuda}, este é \textit{\textless identificação\textgreater}, minha
+    localização é \textit{\textless geolocalização\textgreater}.''
+  \end{alertblock}
+
+  \begin{enumerate}
+  \setcounter{enumi}{5}
+  \item Aguarde a resposta
+  \item Para interromper uma conversa, diga ``\alert{break}'' três vezes
+  \end{enumerate}
+
+  \begin{atencao}
+    Jamais diga ``break'' fora de uma emergência
+    (ITU, 2010, p.~23, apud \citealp{salvatti2024}).
+  \end{atencao}
+\end{frame}
+
+
+\begin{frame}{Radioetiqueta e radioética básicas}
+
+\end{frame}
+
+\begin{frame}{Diversões}
+
+  - sota
+  - pota
+  - aprs
+  - Satélites (ISS)
+
+\end{frame}
+
+%%% Local Variables:
+%%% TeX-master: "../presentation"
+%%% fill-column: 100
+%%% End:

@@ -1,0 +1,122 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+% Parte 5 (continuação): o rádio portátil, antenas, programação e dicas
+% Incluído por presentation.tex; compile a partir dele.
+
+% --- O rádio portátil (HT): anotações em figuras/baofeng.tex, uma página por slide
+\begin{frame}{Conhecendo os equipamentos básicos}
+  \begin{columns}[c,onlytextwidth]
+    \column{0.42\textwidth}
+      \centering
+      \includegraphics[height=6cm]{baofeng-vfo}
+    \column{0.55\textwidth}
+      \textbf{O rádio portátil (HT)}, aqui um Baofeng UV-5R
+      \begin{itemize}
+      \item \alert{Dual-band}: 2\,m (VHF) e 70\,cm (UHF)
+      \item Peso: cerca de 210\,g, com bateria e antena
+      \item Preço: cerca de R\$ 100
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Anatomia do rádio}
+  \begin{columns}[c,onlytextwidth]
+    \column{0.52\textwidth}
+      \figura[page=1]{baofeng}
+    \column{0.46\textwidth}
+      \small
+      \begin{enumerate}
+      \item \textbf{Visor}: mostra a frequência ou o canal
+      \item \textbf{Knob}: liga, desliga e ajusta o volume
+      \end{enumerate}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Duas linhas do visor: A e B}
+  \begin{columns}[c,onlytextwidth]
+    \column{0.52\textwidth}
+      \figura[page=2]{baofeng}
+    \column{0.46\textwidth}
+      \small
+      \begin{itemize}
+      \item O rádio está \alert{sempre ouvindo} as duas linhas
+      \item O botão \textbf{A/B} escolhe por qual linha você transmite
+      \item A seta no visor mostra a linha ativa
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{PTT: aperte para falar}
+  \begin{columns}[c,onlytextwidth]
+    \column{0.52\textwidth}
+    \figura[page=3]{baofeng}
+    \column{0.46\textwidth}
+    \small
+    \begin{itemize}
+    \item Aperte, espere um segundo, fale a um palmo do rádio e solte
+    \item Enquanto você fala, você \alert{não ouve} ninguém
+    \item O rádio fala com \alert{todos ao seu alcance}: não há privacidade\asterisco % a criptografia é crime
+    \end{itemize}
+
+    \bigskip\raggedleft
+    \comentario{O subtom controla apenas o squelch e não torna uma transmissão privada; além disso, a criptografia é crime.}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Memória: VFO e MR}
+  \begin{columns}[c,onlytextwidth]
+    \column{0.52\textwidth}
+      \figura[page=4]{baofeng}
+    \column{0.46\textwidth}
+      \small
+      \begin{itemize}
+      \item \textbf{VFO}: você digita a frequência
+      \item \textbf{MR}: canais salvos na memória, com nome
+      \item O botão \textbf{VFO/MR} alterna entre os dois
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Antenas e programação}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.48\textwidth}
+      \textbf{Antenas}
+      \begin{itemize}
+      \item Primeiro upgrade; a “rubber ducky” original é um elo fraco
+      \item J-Pole, dobrável, direcional (yagi ou log-periódica)
+      \item Transmissão na vertical e o mais alto possível
+      \item Nunca transmita sem antenas
+      \end{itemize}
+    \column{0.48\textwidth}
+      \textbf{Programação com o CHIRP}
+      \begin{itemize}
+      \item Gratuito e aberto: \linkexterno{\linkCHIRP}{chirpmyradio.com}
+      \item Programação de canais e de opções do rádio
+      \item Sincronia entre rádios do mesmo grupo
+      \item Cabo USB com conector K1
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Algumas dicas antes de sair de casa}
+  \small
+  \begin{dica}
+    Transporte o rádio \alert{sem a bateria encaixada}: o knob gira na mochila, o rádio liga e
+    chega descarregado. Já aconteceu.
+  \end{dica}
+
+  \pause
+  \begin{dica}
+    Fique atento ao \alert{squelch} (SQL): silencia o chiado quando ninguém fala; alto demais, corta sinais fracos. O subtom (CTCSS) \alert{não dá privacidade}: só faz o squelch abrir quando o sinal traz aquele tom.
+  \end{dica}
+
+  \pause
+  \begin{regulamento}
+    Rádios como o UV-5R transmitem nas faixas de radioamador: usá-los exige \alert{COER e licença} com indicativo. Eles não são rádios de uso geral (RUG).
+  \end{regulamento}
+\end{frame}
+
+%%% Local Variables:
+%%% TeX-master: "../presentation"
+%%% fill-column: 100
+%%% End:

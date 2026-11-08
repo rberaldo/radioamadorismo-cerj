@@ -1,0 +1,68 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+% Parte 5 (início): o que o rádio faz e não faz; estudo das Sempre-Vivas
+% Incluído por presentation.tex; compile a partir dele.
+
+% =============================================================================
+\section{O rádio na montanha}
+% =============================================================================
+
+\begin{frame}{Potencialidades e limites do rádio}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \column{0.48\textwidth}
+      \textbf{\textcolor{cerjGreenDark}{O rádio faz}}
+      \begin{certos}
+      \item Funciona \alert<1>{sem infraestrutura}: dois rádios bastam
+      \item Fala com \alert<2>{todo o grupo de uma vez}, na caminhada e entre cordadas; \alert<3>{não há privacidade}.
+      \item Contato com a base e o mundo, em linha de visada ou via repetidoras
+      \item É imediato: basta apertar e falar
+      \end{certos}
+    \column{0.48\textwidth}
+      \textbf{\textcolor{cerjRed}{O rádio não faz}}
+      \begin{errados}
+      \item Não garante que \alert<4>{alguém esteja ouvindo}
+      \item Não vence o relevo
+      \item Não resolve áreas muito remotas (ex.: PN das Sempre-Vivas)
+      \item Não substitui o \alert<5>{comunicador satelital} nem as chamadas de \alert<6>{emergência do celular}
+      \item Não funciona sem \alert<7>{preparo} ou licença
+      \end{errados}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Rádio, celular ou comunicador satelital?}
+  \centering
+  \small
+  \renewcommand{\arraystretch}{1.3}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}lllll@{}}
+    \toprule
+    & \textbf{Celular} & \textbf{Rádio simplex} & \textbf{Via repetidora} & \textbf{Satélite} \\[1ex]
+    Infraestrutura      & operadora       & \destaque{nenhuma}      & repetidora    & é complicado \\ \pause
+    Fala com o grupo    & um por vez      & \destaque{todos juntos} & todos juntos  & só mensagens \\ \pause
+    Alcance             & onde há sinal   & linha de visada         & dezenas de km & global \\ \pause
+    Escuta garantida?   & sim (190, 193) & não                     & não           & central 24\,h \\ \pause
+    Custo               & já se tem       & baixo                   & baixo         & alto + plano \\
+    \bottomrule
+  \end{tabular}
+
+  \raggedright
+  \bigskip
+  \normalsize
+  \pause
+  O rádio é a melhor ferramenta para \alert<5->{coordenar o grupo}. Para pedir socorro, ele \alert<6>{soma}, mas nunca substitui.
+\end{frame}
+
+\cerjfullimage{PN-Sempre-Vivas}{%
+  \usebeamerfont{frametitle}Parque Nacional das Sempre-Vivas, MG, abril de 2022}
+
+% Estudo de alcance: gerado por tools/sempre_vivas.py (relevo Copernicus + RepeaterBook)
+\begin{frame}{Estudo de alcance: o rádio teria ajudado?}
+  \centering
+  \includegraphics{sempre-vivas-alcance}   % já sai do tamanho da área do slide
+\end{frame}
+
+%%% Local Variables:
+%%% TeX-master: "../presentation"
+%%% fill-column: 100
+%%% End:

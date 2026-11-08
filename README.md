@@ -11,8 +11,11 @@ feitos em LaTeX com Beamer e o tema
   LuaLaTeX e `latexmk`.
 - Pacotes usados: `beamer`, `beamertheme-metropolis`, `polyglossia`,
   `fontspec`, `fira`, `tcolorbox`, `siunitx`, `booktabs`, `fontawesome5`,
-  `appendixnumberbeamer`, `pgf/tikz`, `mwe` (imagens de exemplo).
+  `natbib`, `xurl`, `appendixnumberbeamer`, `pgf/tikz`, `standalone`.
   Todos fazem parte da instalação completa do TeX Live.
+- Só para regerar as figuras de `tools/` (opcional): Python 3 com `numpy`,
+  `matplotlib` e `Pillow`, e os utilitários do GDAL (`gdal_translate`,
+  `gdalinfo`) para o relevo.
 
 ## Como compilar
 
@@ -25,30 +28,36 @@ latexmk -C       # apaga tudo em build/, inclusive o PDF
 
 O arquivo `latexmkrc` configura o LuaLaTeX, a pasta de saída `build/` e
 acrescenta `engine/` ao caminho de busca do TeX. Ele também compila as figuras
-TikZ de `figuras/` (veja abaixo).
+TikZ de `figuras/` (veja abaixo). O `latexmk -pvc` percebe mudanças em qualquer
+arquivo de `slides/`, `engine/` e `figuras/`.
 
 ## Estrutura
 
 ```
-presentation.tex          conteúdo dos slides
+presentation.tex          preâmbulo, metadados, links e a ordem das partes
+slides/                   o conteúdo, uma parte por arquivo, incluídos por \input
+  01-historia-pessoal.tex … 09-encerramento.tex, 90-anexos.tex
 latexmkrc                 configuração do latexmk (LuaLaTeX, saída em build/)
 engine/
   beamerthemecerj.sty     tema: logo, capa, páginas de seção, rodapé
-  cerj-cores.sty          paleta CERJ (usada pelo tema e pelas figuras)
-  cerj-macros.sty         macros do curso: frequências, indicativos, caixas, fotos
-  cerj-figuras.sty        preâmbulo comum das figuras TikZ (fonte, cores, logos)
+  cerj-cores.sty          paleta CERJ (tema, figuras e gráficos em Python)
   cerj-unidades.sty       números e unidades (\freq), comuns a slides e figuras
-figuras/                  fontes TikZ, uma figura por arquivo (classe standalone)
+  cerj-macros.sty         macros do curso: links, citações, \figura, caixas, fotos
+  cerj-figura.cls         classe das figuras TikZ (standalone, fonte, cores, logos)
+figuras/                  fontes TikZ, uma figura por arquivo
   espectro-brasil.tex     espectro brasileiro (gerado por tools/espectro.py)
-  organizacoes.tex        entidades do radioamadorismo × do montanhismo
   propagacao.tex          introdução à propagação, em 3 passos
-img/                      só imagens prontas: fotos e os PDFs das figuras
+  organizacoes.tex        entidades do radioamadorismo × do montanhismo
+  baofeng.tex             anatomia do Baofeng UV-5R, 4 passos sobre as fotos
+  repetidora.tex          como funciona uma repetidora
+img/                      só imagens prontas: fotos, logos e os PDFs das figuras
   cerj-logo.png           emblema do CERJ
   logos/                  logos de IARU, LABRE, LABRE-RJ, UIAA, CBME e FEEMERJ
-  *.pdf                   saída de figuras/*.tex (não edite: é regerada)
+  *.pdf                   saída de figuras/*.tex e de tools/*.py (não edite: é regerada)
 tools/
-  espectro.py             gera a figura do espectro a partir dos dados da Anatel
-  relevo.py               funções comuns dos estudos de alcance (relevo, perfis, visada)
+  espectro.py             escreve figuras/espectro-brasil.tex a partir dos dados da Anatel
+  relevo.py               relevo (Copernicus), perfis e linha de visada
+  estilo.py               paleta (lida de cerj-cores.sty), fonte e figura do tamanho do slide
   sempre_vivas.py         estudo de alcance no PN das Sempre-Vivas (img/sempre-vivas-alcance.pdf)
   caledonia.py            alcance da PY1MAC, no alto da Caledônia (img/caledonia-alcance.pdf)
 dados/
@@ -58,12 +67,13 @@ dados/
 ## Figuras TikZ
 
 Cada desenho TikZ fica num arquivo próprio em `figuras/`, com a classe
-`standalone` e o preâmbulo comum `engine/cerj-figuras.sty` (mesma fonte, cores
-e tamanhos do tema). O `latexmkrc` compila cada `figuras/X.tex` para
-`img/X.pdf`, só quando a figura mudou, e a apresentação inclui o PDF pronto.
-Assim a apresentação não recompila os desenhos a cada passada.
+`cerj-figura` (`standalone` com a fonte, as cores e as unidades do tema). O
+`latexmkrc` compila cada `figuras/X.tex` para `img/X.pdf`, só quando a figura
+mudou, e a apresentação inclui o PDF pronto. Assim a apresentação não recompila
+os desenhos a cada passada.
 
-- `\figura{X}` inclui `img/X.pdf` sem escala.
+- `\figura{X}` inclui `img/X.pdf` sem escala (também os PDFs gerados por
+  `tools/`).
 - `\figurapassos{X}{n}` inclui uma figura de *n* páginas, uma por passo do
   slide (página *k* no passo *k*). Na fonte, desenhe cada passo como uma
   página (veja `figuras/propagacao.tex`).
@@ -71,11 +81,9 @@ Assim a apresentação não recompila os desenhos a cada passada.
   existentes e use `\figura{X}` no slide. O `latexmk -pvc` percebe quando você
   salva a figura e recompila tudo.
 
-## Modelos de slide incluídos
+## Tipos de slide
 
-`presentation.tex` traz um exemplo de cada tipo, pronto para copiar:
-
-| Modelo | Como usar |
+| Tipo | Como usar |
 |---|---|
 | Capa escura com logo | `\cerjtitleframe` (ou `\maketitle` para capa clara) |
 | Sumário | `\tableofcontents` |
@@ -86,6 +94,7 @@ Assim a apresentação não recompila os desenhos a cada passada.
 | Tabela | `tabular` com `booktabs` |
 | Blocos | `block`, `alertblock`, `exampleblock` |
 | Caixas de destaque | ambientes `dica`, `atencao`, `regulamento` |
+| Listas de ✓ e ✗ | ambientes `certos` e `errados` (prós e contras) |
 | Lista numerada | `enumerate` |
 | Frase de impacto | `\begin{frame}[standout]` |
 | Encerramento com contatos | `standout` com `\cerjlogo` |
@@ -93,11 +102,12 @@ Assim a apresentação não recompila os desenhos a cada passada.
 
 Macros de texto:
 
-- `\freq{146.520}` imprime 146,520 MHz e `\freqrange{144}{148}` imprime
-  144 a 148 MHz.
+- `\freq{146,520}` imprime 146,520 MHz e `\freqrange{144}{148}` imprime
+  144 a 148 MHz; para outras unidades, `\qty{88,5}{\hertz}` (siunitx).
 - `\indicativo{PY1XXX}` imprime um indicativo de chamada em monoespaçado.
 - `\alert{termo}` destaca um termo em laranja e negrito (o `\alert` do Beamer,
-  ajustado pelo tema).
+  ajustado pelo tema); `\destaque{termo}` faz o mesmo sem overlay, para
+  dentro de tabelas.
 - `\foto{arquivo}{legenda}` põe uma foto na largura da coluna com a legenda
   embaixo. Aceita opções do `\includegraphics` (`\foto[height=4cm]{...}{...}`);
   com `{}` no lugar da legenda, sai só a foto.
@@ -140,8 +150,8 @@ texto usa versões escurecidas.
 **Logo.** `img/cerj-logo.png` é o emblema em alta resolução (2858 × 2378 px,
 fundo transparente).
 
-**Imagens.** Coloque suas fotos em `img/` e troque os nomes
-`example-image-*` usados nos slides de exemplo.
+**Imagens.** Fotos ficam em `img/`; use `\foto{nome}{legenda}` ou
+`\cerjfullimage{nome}{legenda}`.
 
 ## Licença
 

@@ -10,15 +10,17 @@
 \RequirePackage{siunitx}
 \sisetup{
   mode = text,
+  input-decimal-markers = {,.},   % escreva \freq{146,520}; o ponto também vale
   output-decimal-marker = {,},
   group-minimum-digits = 4,
   group-digits = integer,   % não separa as decimais: 462,6625 MHz, não 462,662 5
   range-phrase = { a },
   range-units = single,
-  retain-explicit-plus = true,   % \freq{+0.6} -> +0,6 MHz (sinal do deslocamento)
+  retain-explicit-plus = true,   % \freq{+0,6} -> +0,6 MHz (sinal do deslocamento)
 }
 
-% \freq{146.520}            -> 146,520 MHz   (\freq{-0.6} -> −0,6 MHz)
+% \freq{146,520}            -> 146,520 MHz   (\freq{-0,6} -> −0,6 MHz)
 % \freqrange{144}{148}      -> 144 a 148 MHz
+% \qty{88,5}{\hertz}        -> 88,5 Hz (qualquer unidade do siunitx)
 \newcommand{\freq}[1]{\qty{#1}{\mega\hertz}}
 \newcommand{\freqrange}[2]{\qtyrange{#1}{#2}{\mega\hertz}}
