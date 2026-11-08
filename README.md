@@ -153,6 +153,22 @@ fundo transparente).
 **Imagens.** Fotos ficam em `img/`; use `\foto{nome}{legenda}` ou
 `\cerjfullimage{nome}{legenda}`.
 
+## Uso de inteligência artificial
+
+Este material foi feito com a ajuda do Claude (Anthropic), pelo Claude Code,
+como assistente de programação, pesquisa e redação. A IA foi usada para:
+
+- escrever e refatorar o código: o tema e as macros em LaTeX, as figuras TikZ,
+  o `latexmkrc` e os scripts de `tools/` (espectro e estudos de alcance);
+- pesquisar e conferir fontes: regras e taxas da Anatel, dados das
+  repetidoras, referências em ABNT e materiais de outras palestras;
+- propor e revisar o texto dos slides e a organização da apresentação.
+
+O conteúdo, as escolhas didáticas e a experiência de montanha e de rádio são
+do autor, que revisou, corrigiu e validou tudo o que está aqui: cada slide,
+cada figura, cada número e cada referência. Eventuais erros são de sua
+responsabilidade; correções são bem-vindas.
+
 ## Licença
 
 O conteúdo deste repositório (slides, código LaTeX e textos) está licenciado
