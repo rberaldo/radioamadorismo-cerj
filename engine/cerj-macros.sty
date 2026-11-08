@@ -9,7 +9,7 @@
 \ProvidesPackage{cerj-macros}[2026/11/07 v0.1 Macros do curso de radioamadorismo CERJ]
 
 \RequirePackage{booktabs}
-\RequirePackage{siunitx}
+\RequirePackage{cerj-unidades}   % siunitx, \freq e \freqrange
 \RequirePackage{tikz}
 \RequirePackage{xspace}
 \usetikzlibrary{positioning, arrows.meta, calc}
@@ -79,21 +79,6 @@
 % ---------------------------------------------------------------------------
 \newcommand{\CERJ}{\textsc{cerj}\xspace}
 
-% ---------------------------------------------------------------------------
-% Números e unidades (vírgula decimal, modo texto para herdar a fonte Fira)
-% ---------------------------------------------------------------------------
-\sisetup{
-  mode = text,
-  output-decimal-marker = {,},
-  group-minimum-digits = 4,
-  range-phrase = { a },
-  range-units = single,
-}
-
-% \freq{146.520}            -> 146,520 MHz
-% \freqrange{144}{148}      -> 144 a 148 MHz
-\newcommand{\freq}[1]{\qty{#1}{\mega\hertz}}
-\newcommand{\freqrange}[2]{\qtyrange{#1}{#2}{\mega\hertz}}
 
 % Indicativo de chamada em monoespaçado: \indicativo{PY1XXX}
 % Herda a cor do texto, então funciona em fundo claro e escuro.

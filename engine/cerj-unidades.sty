@@ -1,0 +1,24 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+%% cerj-unidades.sty
+%% Números e unidades do curso, comuns aos slides (cerj-macros.sty) e às
+%% figuras TikZ (cerj-figuras.sty): vírgula decimal, modo texto para herdar a
+%% fonte Fira, e as frequências.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cerj-unidades}[2026/11/08 v0.1 Numeros e unidades do curso CERJ]
+
+\RequirePackage{siunitx}
+\sisetup{
+  mode = text,
+  output-decimal-marker = {,},
+  group-minimum-digits = 4,
+  group-digits = integer,   % não separa as decimais: 462,6625 MHz, não 462,662 5
+  range-phrase = { a },
+  range-units = single,
+  retain-explicit-plus = true,   % \freq{+0.6} -> +0,6 MHz (sinal do deslocamento)
+}
+
+% \freq{146.520}            -> 146,520 MHz   (\freq{-0.6} -> −0,6 MHz)
+% \freqrange{144}{148}      -> 144 a 148 MHz
+\newcommand{\freq}[1]{\qty{#1}{\mega\hertz}}
+\newcommand{\freqrange}[2]{\qtyrange{#1}{#2}{\mega\hertz}}

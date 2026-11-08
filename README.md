@@ -37,6 +37,7 @@ engine/
   cerj-cores.sty          paleta CERJ (usada pelo tema e pelas figuras)
   cerj-macros.sty         macros do curso: frequências, indicativos, caixas, fotos
   cerj-figuras.sty        preâmbulo comum das figuras TikZ (fonte, cores, logos)
+  cerj-unidades.sty       números e unidades (\freq), comuns a slides e figuras
 figuras/                  fontes TikZ, uma figura por arquivo (classe standalone)
   espectro-brasil.tex     espectro brasileiro (gerado por tools/espectro.py)
 img/                      só imagens prontas: fotos e os PDFs das figuras
