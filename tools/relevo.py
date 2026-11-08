@@ -1,10 +1,13 @@
 # SPDX-License-Identifier: CC-BY-SA-4.0
 # Copyright (c) 2026 Rafael Beraldo
-"""Funções comuns aos estudos de alcance (relevo, perfis, linha de visada).
+"""Relevo e linha de visada, para os estudos de alcance (sempre_vivas.py,
+caledonia.py).
 
-Relevo: Copernicus DEM GLO-30, lido da AWS com o GDAL só na janela pedida; o
-recorte fica em cache em build/cache/. Visada com refração padrão (raio efetivo
-da Terra = 4/3 do real).
+Relevo: Copernicus DEM GLO-30, lido da AWS com o GDAL só na janela pedida e
+reamostrado; o recorte fica em cache em build/cache/. Visada com refração
+padrão (raio efetivo da Terra = 4/3 do real). É um cálculo só de linha de
+visada: não considera potência, difração nem reflexões, então mostra o melhor
+caso.
 """
 import json
 import math
@@ -12,22 +15,39 @@ import subprocess
 from pathlib import Path
 
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import font_manager
 
 RAIZ = Path(__file__).resolve().parent.parent
 CACHE = RAIZ / "build" / "cache"
-K = 4 / 3
+K = 4 / 3                 # refração padrão
 R_TERRA = 6_371_000.0
+KM_LAT = 110.574          # km por grau de latitude
 
-# Paleta (engine/cerj-cores.sty)
-AZUL, AZUL60, AZUL_EMBLEMA = "#003366", "#6685A3", "#3C4398"
-VERDE, VERDE_ESCURO, TINTA, PAPEL = "#44AC6A", "#338150", "#001F3D", "#FAFAFA"
-VERMELHO, LARANJA = "#B32424", "#B34700"
 
+def km_lon(lat):
+    """km por grau de longitude, nesta latitude."""
+    return 111.320 * math.cos(math.radians(lat))
+
+
+def janela(lat, lon, raio_km):
+    """(oeste, sul, leste, norte) de um quadrado de raio_km em volta do ponto."""
+    dlat, dlon = raio_km / KM_LAT, raio_km / km_lon(lat)
+    return lon - dlon, lat - dlat, lon + dlon, lat + dlat
+
+
+def projecao(lat0, lon0):
+    """Função (lat, lon) -> (x, y) em km, com a origem no ponto dado."""
+    kl = km_lon(lat0)
+    return lambda lat, lon: ((lon - lon0) * kl, (lat - lat0) * KM_LAT)
+
+
+# --- Relevo --------------------------------------------------------------------
 
 def baixar_relevo(nome, oeste, sul, leste, norte, resolucao=1 / 3600):
-    """Recorta o Copernicus GLO-30 na janela pedida. Devolve (z, lats, lons)."""
+    """Recorta o Copernicus GLO-30 na janela (graus). Devolve (z, lats, lons).
+
+    resolucao em graus: 1/3600 = 1" (~30 m), 1/1200 = 3" (~90 m). Mar e lacunas
+    ficam no nível do mar (0).
+    """
     CACHE.mkdir(parents=True, exist_ok=True)
     tif = CACHE / f"{nome}.tif"
     if not tif.exists():
@@ -53,12 +73,18 @@ def baixar_relevo(nome, oeste, sul, leste, norte, resolucao=1 / 3600):
     w, h = info["size"]
     x0, dx, _, y0, _, dy = info["geoTransform"]
     z = np.fromfile(bruto, dtype="<f4").reshape(h, w)
-    z = np.where(z < -1000, np.nan, z)          # sem dados
-    z = np.where(np.isnan(z), 0.0, z)           # mar e lacunas no nível do mar
+    z = np.where((z < -1000) | np.isnan(z), 0.0, z)
     lons = x0 + dx * (np.arange(w) + 0.5)
     lats = y0 + dy * (np.arange(h) + 0.5)
     return z, lats, lons
 
+
+def passo_km(lats):
+    """Tamanho de uma célula do relevo, em km (na latitude)."""
+    return abs(lats[1] - lats[0]) * KM_LAT
+
+
+# --- Geometria -----------------------------------------------------------------
 
 def distancia_km(lat0, lon0, lat, lon):
     p1, p2 = math.radians(lat0), math.radians(lat)
@@ -68,6 +94,7 @@ def distancia_km(lat0, lon0, lat, lon):
 
 
 def indice(lats, lons, la, lo):
+    """Índices (i, j) das células mais próximas de vetores de lat/lon."""
     i = np.clip(np.round((la - lats[0]) / (lats[1] - lats[0])).astype(int), 0, len(lats) - 1)
     j = np.clip(np.round((lo - lons[0]) / (lons[1] - lons[0])).astype(int), 0, len(lons) - 1)
     return i, j
@@ -75,10 +102,8 @@ def indice(lats, lons, la, lo):
 
 def ponto_mais_alto(z, lats, lons, lat, lon, raio_km):
     """Ponto mais alto do terreno a até raio_km de (lat, lon)."""
-    km_lat = 110.574
-    km_lon = 111.320 * math.cos(math.radians(lat))
-    di = max(int(raio_km / (abs(lats[1] - lats[0]) * km_lat)), 1)
-    dj = max(int(raio_km / (abs(lons[1] - lons[0]) * km_lon)), 1)
+    di = max(int(raio_km / passo_km(lats)), 1)
+    dj = max(int(raio_km / (abs(lons[1] - lons[0]) * km_lon(lat))), 1)
     i0, j0 = indice(lats, lons, np.array([lat]), np.array([lon]))
     ii, jj = np.mgrid[-di:di + 1, -dj:dj + 1]
     dentro = (ii / di) ** 2 + (jj / dj) ** 2 <= 1
@@ -109,19 +134,31 @@ def visada(d, elev, alt_inicio, alt_fim):
     return bool((linha[1:-1] > terreno[1:-1]).all()), linha, terreno
 
 
-def fontes(tamanho=8):
-    """Fira Sans do TeX Live e cores do tema no matplotlib."""
-    for nome in ("FiraSans-Light.otf", "FiraSans-Regular.otf"):
-        caminho = subprocess.run(["kpsewhich", nome], capture_output=True, text=True).stdout.strip()
-        if caminho:
-            font_manager.fontManager.addfont(caminho)
-    plt.rcParams.update({
-        "font.family": "Fira Sans", "font.weight": 300, "font.size": tamanho,
-        "axes.edgecolor": AZUL60, "axes.labelcolor": TINTA, "text.color": TINTA,
-        "xtick.color": AZUL60, "ytick.color": AZUL60, "axes.linewidth": 0.5,
-        "pdf.fonttype": 42})
-
-
-def br(x, casas=0):
-    """Número no formato brasileiro."""
-    return f"{x:,.{casas}f}".replace(",", " ").replace(".", ",").replace(" ", ".")
+def area_de_visada(z, lats, lons, lat_obs, lon_obs, alt_obs, alt_alvo, alcance_km):
+    """Células, até alcance_km, de onde um alvo a alt_alvo do chão enxerga o
+    observador a alt_obs do chão (e vice-versa). Varre o horizonte em raios."""
+    visivel = np.zeros(z.shape, dtype=bool)
+    passo = passo_km(lats) * 1000                            # m por célula
+    n = int(alcance_km * 1000 / passo)
+    k = np.arange(1, n + 1)
+    d = k * passo
+    queda = curvatura(d)
+    i0 = (lat_obs - lats[0]) / (lats[1] - lats[0])
+    j0 = (lon_obs - lons[0]) / (lons[1] - lons[0])
+    escala_j = KM_LAT / km_lon(lat_obs) * abs((lats[1] - lats[0]) / (lons[1] - lons[0]))
+    io, jo = indice(lats, lons, np.array([lat_obs]), np.array([lon_obs]))
+    h0 = z[io[0], jo[0]] + alt_obs
+    visivel[io[0], jo[0]] = True
+    for ang in np.linspace(0, 2 * math.pi, int(2 * math.pi * n * 1.1), endpoint=False):
+        ii = np.round(i0 - np.sin(ang) * k).astype(int)
+        jj = np.round(j0 + np.cos(ang) * k * escala_j).astype(int)
+        dentro = (ii >= 0) & (ii < z.shape[0]) & (jj >= 0) & (jj < z.shape[1])
+        if not dentro.any():
+            continue
+        ii, jj, dd, qq = ii[dentro], jj[dentro], d[dentro], queda[dentro]
+        terreno = z[ii, jj] - qq
+        ang_terreno = (terreno - h0) / dd
+        ang_alvo = (terreno + alt_alvo - h0) / dd
+        horizonte = np.maximum.accumulate(np.concatenate([[-np.inf], ang_terreno[:-1]]))
+        visivel[ii, jj] |= ang_alvo >= horizonte
+    return visivel
