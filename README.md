@@ -200,6 +200,8 @@ Também ficam fora da licença CC BY-SA, com os direitos de seus autores:
 | `img/Repeater-Book-RJ.png` | captura de tela do [RepeaterBook](https://www.repeaterbook.com) |
 | `img/espectro-simulacao.png` | captura de tela do simulador da [Mini Physics](https://www.miniphysics.com) |
 | `img/antenna1.png` | detalhe da capa da revista *Antenna*, n. 1, 1926 |
+| `img/enchentes-rs-rener.jpg` | imagem da [LABRE](https://www.labre.org.br/radioamadores-e-as-enchentes-no-rs/) (RENER), recortada |
+| `img/petropolis-estacao.jpg` | foto da [LABRE](https://www.labre.org.br/tragedia-em-petropolis-radioamadores-prestam-apoio/) |
 
 Os dados usados pelas figuras de `tools/` têm licença própria:
 
