@@ -2,13 +2,12 @@
 % Copyright (c) 2026 Rafael Beraldo
 % !TEX program = lualatex
 % Como funciona uma repetidora: quem não se enxerga (um montanhista e uma casa
-% com antena) fala pela entrada e ouve
-% pela saída de uma repetidora no alto do morro (frequências da PY1MAC).
+% com antena) fala pela entrada e ouve pela saída de uma repetidora no alto
+% do morro (frequências da PY1MAC).
 % Compilada pelo latexmkrc para img/repetidora.pdf; a apresentação inclui com \figura{repetidora}.
-\documentclass[11pt, border=2pt, tikz]{standalone}
 % Acha engine/ compilando da raiz ou de dentro de figuras/
 \makeatletter\def\input@path{{engine/}{../engine/}}\makeatother
-\usepackage{cerj-figuras}
+\documentclass{cerj-figura}
 
 \begin{document}
 \begin{tikzpicture}[scale=.7,

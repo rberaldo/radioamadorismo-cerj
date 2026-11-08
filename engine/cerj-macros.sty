@@ -1,18 +1,18 @@
 % SPDX-License-Identifier: CC-BY-SA-4.0
 % Copyright (c) 2026 Rafael Beraldo
 %% cerj-macros.sty
-%% Macros de conteúdo para o curso: indicativos, frequências, caixas de
-%% destaque (Dica / Atenção / Regulamento), foto com legenda e slide de foto
-%% em tela cheia.
-%% Depende das cores definidas em beamerthemecerj.sty.
+%% Macros de conteúdo para o curso: links e referências (natbib), figuras
+%% TikZ compiladas à parte (\figura, \figurapassos), abreviações, caixas de
+%% destaque (Dica / Atenção / Regulamento), listas de ✓/✗, foto com legenda,
+%% comentários e o slide de foto em tela cheia.
+%% Depende da paleta (cerj-cores.sty, via o tema) e das unidades (cerj-unidades.sty).
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{cerj-macros}[2026/11/07 v0.1 Macros do curso de radioamadorismo CERJ]
 
 \RequirePackage{booktabs}
 \RequirePackage{cerj-unidades}   % siunitx, \freq e \freqrange
-\RequirePackage{tikz}
+\RequirePackage{tikz}              % só o \cerjfullimage; os desenhos ficam em figuras/
 \RequirePackage{xspace}
-\usetikzlibrary{positioning, arrows.meta, calc}
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{fontawesome5}
 
@@ -58,12 +58,15 @@
 % Figuras TikZ (fontes em figuras/, PDFs em img/, compilados pelo latexmkrc)
 % ---------------------------------------------------------------------------
 % \figura[opções]{nome}: inclui img/nome.pdf, sem escala para manter a fonte
-% do tamanho do slide. Também abre figuras/nome.tex (sem ler nada) só para o
-% arquivo entrar no .fls como dependência: assim o latexmk -pvc recompila
-% quando a figura muda. (\IfFileExists não serve: não abre o arquivo.)
-\newread\cerj@dependencia
-\newcommand{\cerj@registrafonte}[1]{%
-  \openin\cerj@dependencia=figuras/#1.tex\relax\closein\cerj@dependencia}
+% do tamanho do slide. Serve também para os PDFs gerados por tools/*.py.
+% Além disso abre figuras/nome.tex (sem ler nada) só para o arquivo entrar no
+% .fls como dependência: assim o latexmk -pvc recompila quando a figura muda.
+% (\IfFileExists não serve: não abre o arquivo.)
+\newread\cerj@leitura
+\newcommand{\cerj@dependencia}[1]{\openin\cerj@leitura=#1\relax\closein\cerj@leitura}
+\newcommand{\cerj@registrafonte}[1]{\cerj@dependencia{figuras/#1.tex}}
+% Mudar a classe das figuras também deve disparar o -pvc
+\cerj@dependencia{engine/cerj-figura.cls}
 \newcommand{\figura}[2][]{\cerj@registrafonte{#2}\includegraphics[#1]{#2}}
 
 % \figurapassos{nome}{n}: figura de n páginas, uma por passo do slide
@@ -87,6 +90,10 @@
 % Indicativo de chamada em monoespaçado: \indicativo{PY1XXX}
 % Herda a cor do texto, então funciona em fundo claro e escuro.
 \newcommand{\indicativo}[1]{{\ttfamily #1}}
+
+% \destaque{termo}: como o \alert (laranja e negrito), mas sem overlay; para
+% dentro de tabelas, onde o \alert do beamer desalinha as colunas.
+\newcommand{\destaque}[1]{\textcolor{cerjOrange}{\bfseries #1}}
 
 % ---------------------------------------------------------------------------
 % Caixas de destaque (tcolorbox)
@@ -137,6 +144,19 @@
   title={\faGavel\ Regulamento},
   #1
 }
+
+% ---------------------------------------------------------------------------
+% Listas de ✓ e ✗ (prós e contras, "faz" e "não faz")
+% ---------------------------------------------------------------------------
+% \begin{certos} \item ... \end{certos}     marcador ✓ verde
+% \begin{errados} \item ... \end{errados}   marcador ✗ vermelho
+% Aceitam as opções do itemize: \begin{certos}[<+->]
+\newenvironment{certos}[1][]{%
+  \setbeamertemplate{itemize item}{\textcolor{cerjGreenDark}{\faCheck}}%
+  \begin{itemize}[#1]}{\end{itemize}}
+\newenvironment{errados}[1][]{%
+  \setbeamertemplate{itemize item}{\textcolor{cerjRed}{\faTimes}}%
+  \begin{itemize}[#1]}{\end{itemize}}
 
 % ---------------------------------------------------------------------------
 % Foto com legenda

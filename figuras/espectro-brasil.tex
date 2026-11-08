@@ -2,10 +2,9 @@
 % Gerado por tools/espectro.py. Não edite à mão.
 % Fonte: Anatel — Plano de Atribuição, Destinação e Distribuição de Faixas de Frequências no Brasil (PDFF), Resolução Anatel nº 789, de 06/07/2026; coluna Brasil
 % Obtido em 2026-11-07: https://sistemas.anatel.gov.br/se/modulos/plano/consulta
-\documentclass[11pt, border=2pt]{standalone}
 % Acha engine/ compilando da raiz ou de dentro de figuras/
 \makeatletter\def\input@path{{engine/}{../engine/}}\makeatother
-\usepackage{cerj-figuras}
+\documentclass{cerj-figura}
 \begin{document}
 \begin{tikzpicture}[x=1cm, y=1cm, font=\sffamily]
   \tikzset{amP/.style={fill=cerjGreenDark}, amS/.style={fill=cerjGreen!55!cerjPaper}, rd/.style={fill=cerjBlue!35!cerjPaper}, outro/.style={fill=cerjNavy10}, rot/.style={font=\sffamily\tiny, inner sep=1pt}, ham/.style={rot, text=cerjGreenDark, anchor=south}}
@@ -652,7 +651,7 @@
   \node[rot, anchor=west, text=cerjInk] at (6.45,-5.230) {radiodifusão (rádio e TV)};
   \fill[outro] (9.30,-5.320) rectangle (9.60,-5.140);
   \node[rot, anchor=west, text=cerjInk] at (9.65,-5.230) {outros serviços};
-  \node[rot, anchor=north east, text=cerjInk!60!cerjPaper] at (11.4,-5.400) {Fonte: Anatel, PDFF (Res.\ 789/2026), coluna Brasil. Escala logarítmica em cada linha.};
+  \node[rot, anchor=north east, text=cerjMuted] at (11.4,-5.400) {Fonte: Anatel, PDFF (Res.\ 789/2026), coluna Brasil. Escala logarítmica em cada linha.};
 \end{tikzpicture}
 \end{document}
 

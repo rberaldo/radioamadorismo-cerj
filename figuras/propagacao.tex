@@ -4,10 +4,9 @@
 % Introdução à propagação, em 3 passos (uma página por passo):
 % 1 HF pela ionosfera; 2 VHF/UHF não volta e o morro bloqueia; 3 quem está no cume fala com todos.
 % Compilada pelo latexmkrc para img/propagacao.pdf; a apresentação inclui com \figurapassos{propagacao}{3}.
-\documentclass[11pt, border=2pt, tikz]{standalone}
 % Acha engine/ compilando da raiz ou de dentro de figuras/
 \makeatletter\def\input@path{{engine/}{../engine/}}\makeatother
-\usepackage{cerj-figuras}
+\documentclass{cerj-figura}
 % \propagacao{n} desenha o passo n; todas as páginas têm o mesmo tamanho
 \newcommand{\propagacao}[1]{%
   \begin{tikzpicture}[scale=.9,

@@ -3,25 +3,20 @@
 """Gera img/espectro-brasil.pdf: o espectro brasileiro inteiro, de 3 kHz a
 300 GHz, com as faixas do radioamador em destaque.
 
-A figura é um documento TikZ à parte (figuras/espectro-brasil.tex, classe
-standalone) compilado com LuaLaTeX. A apresentação só inclui o PDF pronto,
-sem recompilar o desenho:  \figura{espectro-brasil}
-(o latexmkrc também recompila o PDF sempre que o .tex muda).
+Este script só escreve a fonte TikZ, figuras/espectro-brasil.tex (classe
+cerj-figura). Quem a compila para img/espectro-brasil.pdf é o latexmkrc, como
+faz com as outras figuras; a apresentação inclui o PDF com \figura{espectro-brasil}.
 
 Os dados vêm do PDFF da Anatel (coluna Brasil), salvos em dados/pdff-brasil.json.
 
     python3 tools/espectro.py            gera a figura a partir do JSON salvo
     python3 tools/espectro.py --baixar   baixa o PDFF atual da Anatel antes
-    python3 tools/espectro.py --sem-pdf  só escreve o .tex, sem compilar
 
 Cada linha da figura é uma faixa da UIT (VLF … EHF), em escala logarítmica.
 """
 import json
-import os
-import shutil
-import subprocess
-import tempfile
 import math
+import re
 import sys
 import urllib.parse
 import urllib.request
@@ -32,7 +27,6 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 DADOS = RAIZ / "dados" / "pdff-brasil.json"
 SAIDA = RAIZ / "figuras" / "espectro-brasil.tex"
-PDF = RAIZ / "img" / "espectro-brasil.pdf"
 
 # --- Geometria (cm) ----------------------------------------------------------
 LARGURA = 11.4     # largura de cada barra (uma década)
@@ -156,12 +150,9 @@ def gerar():
     p(f"% Gerado por tools/espectro.py. Não edite à mão.\n"
       f"% Fonte: {meta['fonte']}\n% Obtido em {meta['obtido_em']}: "
       f"{meta['url']}")
-    # Mesma fonte (Fira Sans, do metropolis), tamanhos (11pt) e cores do tema:
-    # incluído sem escala, o PDF fica idêntico a um desenho feito no slide.
-    p(r"\documentclass[11pt, border=2pt]{standalone}")
     p(r"% Acha engine/ compilando da raiz ou de dentro de figuras/")
     p(r"\makeatletter\def\input@path{{engine/}{../engine/}}\makeatother")
-    p(r"\usepackage{cerj-figuras}")
+    p(r"\documentclass{cerj-figura}")
     p(r"\begin{document}")
     p(r"\begin{tikzpicture}[x=1cm, y=1cm, font=\sffamily]")
     p(r"  \tikzset{amP/.style={fill=cerjGreenDark},"
@@ -238,8 +229,11 @@ def gerar():
         p(f"  \\node[rot, anchor=west, text=cerjInk] at ({xl + 0.35:.2f},"
           f"{y + 0.09:.3f}) {{{texto}}};")
         xl += w
-    p(f"  \\node[rot, anchor=north east, text=cerjInk!60!cerjPaper] at"
-      f" ({LARGURA},{y - 0.08:.3f}) {{Fonte: Anatel, PDFF (Res.\\ 789/2026),"
+    # "Resolução Anatel nº 789, de 06/07/2026" -> "Res. 789/2026"
+    res = re.search(r"nº\s*([\d.]+), de \d\d/\d\d/(\d{4})", meta["fonte"])
+    edicao = f"Res.\\ {res.group(1)}/{res.group(2)}" if res else "edição vigente"
+    p(f"  \\node[rot, anchor=north east, text=cerjMuted] at"
+      f" ({LARGURA},{y - 0.08:.3f}) {{Fonte: Anatel, PDFF ({edicao}),"
       f" coluna Brasil. Escala logarítmica em cada linha.}};")
     p(r"\end{tikzpicture}")
     p(r"\end{document}")
@@ -251,24 +245,8 @@ def gerar():
     print(f"{SAIDA.relative_to(RAIZ)}: {len(blocos)} faixas de radioamador")
 
 
-def compilar():
-    """Compila o .tex numa pasta temporária e copia só o PDF para img/."""
-    pdf = PDF
-    env = dict(os.environ, TEXINPUTS=f"{RAIZ / 'engine'}//:")
-    with tempfile.TemporaryDirectory() as tmp:
-        r = subprocess.run(
-            ["lualatex", "-interaction=nonstopmode", "-halt-on-error",
-             f"-output-directory={tmp}", str(SAIDA)],
-            cwd=RAIZ, env=env, capture_output=True, text=True)
-        if r.returncode != 0:
-            sys.exit(r.stdout[-2000:] + "\nFalha ao compilar " + str(SAIDA))
-        shutil.copy(Path(tmp) / SAIDA.with_suffix(".pdf").name, pdf)
-    print(f"{pdf.relative_to(RAIZ)} compilado")
-
-
 if __name__ == "__main__":
     if "--baixar" in sys.argv:
         baixar()
     gerar()
-    if "--sem-pdf" not in sys.argv:
-        compilar()
+    print("Rode latexmk para compilar img/espectro-brasil.pdf")

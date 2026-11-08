@@ -4,10 +4,9 @@
 % Anatomia do Baofeng UV-5R, uma página por slide:
 % 1 visor e knob; 2 botão A/B e as duas linhas do visor; 3 PTT; 4 VFO/MR e o canal no visor.
 % Compilada pelo latexmkrc para img/baofeng.pdf; a apresentação inclui com \figura[page=k]{baofeng}.
-\documentclass[11pt, border=2pt, tikz]{standalone}
 % Acha engine/ compilando da raiz ou de dentro de figuras/
 \makeatletter\def\input@path{{engine/}{../engine/}}\makeatother
-\usepackage{cerj-figuras}
+\documentclass{cerj-figura}
 
 \tikzset{
   marca/.style={draw=cerjOrange, line width=1.2pt, rounded corners=2pt},

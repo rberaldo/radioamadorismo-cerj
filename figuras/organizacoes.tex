@@ -3,11 +3,10 @@
 % !TEX program = lualatex
 % Radioamadorismo × montanhismo: entidades mundial, nacional, estadual e local.
 % Compilada pelo latexmkrc para img/organizacoes.pdf; a apresentação inclui com \figura{organizacoes}.
-\documentclass[11pt, border=2pt, tikz]{standalone}
 % Acha engine/ compilando da raiz ou de dentro de figuras/
 \makeatletter\def\input@path{{engine/}{../engine/}}\makeatother
-\usepackage{cerj-figuras}
-% Logos em img/logos/ (\orglogo, em cerj-figuras.sty); sem o arquivo, sai o ícone
+\documentclass{cerj-figura}
+% Logos em img/logos/ (\orglogo, em cerj-figura.cls); sem o arquivo, sai o ícone
 \begin{document}
 \begin{tikzpicture}[
   org/.style={draw=cerjNavy40, fill=cerjNavy10, rounded corners=3pt, inner sep=3pt,
