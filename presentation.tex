@@ -33,6 +33,13 @@
 \institute[\CERJ]{Centro Excursionista Rio de Janeiro (\CERJ)}
 \date{12 de novembro de 2026}
 
+% --- Links --------------------------------------------------------------------
+% Todos os endereços da apresentação ficam aqui. Uso:
+%   \href{\linkCERJ}{texto clicável}   texto que abre o endereço
+%   \mostrarlink{\linkCERJ}            o próprio endereço, clicável
+% Em endereços com # ou %, escreva \# e \%.
+\newcommand{\linkCERJ}{https://cerj.org.br}
+
 \begin{document}
 
 % =============================================================================
@@ -197,7 +204,7 @@
   Obrigado! \\[0.4em]
   {\small\normalfont
     \faEnvelope\ rberaldo@cabaladada.org \quad
-    \faGlobe\ cerj.org.br \quad
+    \faGlobe\ \href{\linkCERJ}{cerj.org.br} \quad
     \faBroadcastTower\ \indicativo{PU1JAZ}}
 \end{frame}
 
@@ -210,7 +217,7 @@
   \begin{itemize}
     \item Anatel: regulamento do serviço de radioamador
     \item LABRE: plano de bandas e exames
-    \item CERJ: \url{https://cerj.org.br}
+    \item CERJ: \mostrarlink{\linkCERJ}
   \end{itemize}
 \end{frame}
 

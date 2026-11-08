@@ -19,6 +19,10 @@
 % URLs na fonte do texto, não em monoespaçado
 \urlstyle{same}
 
+% Endereço guardado numa macro, escrito e clicável: \mostrarlink{\linkCERJ}
+% (\url sozinho não expande a macro e escreveria "\linkCERJ")
+\newcommand{\mostrarlink}[1]{\expandafter\url\expandafter{#1}}
+
 
 % ---------------------------------------------------------------------------
 % Abreviações
