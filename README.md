@@ -40,8 +40,11 @@ engine/
   cerj-unidades.sty       números e unidades (\freq), comuns a slides e figuras
 figuras/                  fontes TikZ, uma figura por arquivo (classe standalone)
   espectro-brasil.tex     espectro brasileiro (gerado por tools/espectro.py)
+  organizacoes.tex        entidades do radioamadorismo × do montanhismo
+  propagacao.tex          introdução à propagação, em 3 passos
 img/                      só imagens prontas: fotos e os PDFs das figuras
   cerj-logo.png           emblema do CERJ
+  logos/                  logos de IARU, LABRE, LABRE-RJ, UIAA, CBME e FEEMERJ
   *.pdf                   saída de figuras/*.tex (não edite: é regerada)
 tools/
   espectro.py             gera a figura do espectro a partir dos dados da Anatel
@@ -63,7 +66,7 @@ Assim a apresentação não recompila os desenhos a cada passada.
 - `\figura{X}` inclui `img/X.pdf` sem escala.
 - `\figurapassos{X}{n}` inclui uma figura de *n* páginas, uma por passo do
   slide (página *k* no passo *k*). Na fonte, desenhe cada passo como uma
-  página.
+  página (veja `figuras/propagacao.tex`).
 - Para uma figura nova, crie `figuras/X.tex` copiando o cabeçalho de uma das
   existentes e use `\figura{X}` no slide. O `latexmk -pvc` percebe quando você
   salva a figura e recompila tudo.
@@ -153,5 +156,9 @@ mesma licença.
 Excursionista Rio de Janeiro e **não** está coberto pela licença CC BY-SA.
 Ele foi incluído apenas para identificar o curso. Em trabalhos derivados que
 não sejam do CERJ, remova-o ou obtenha autorização do clube.
+
+Pelo mesmo motivo, os logos em `img/logos/` (IARU, LABRE, LABRE-RJ, UIAA,
+CBME e FEEMERJ) são marcas das respectivas organizações, usados apenas para
+identificá-las, e também ficam fora da licença CC BY-SA.
 
 Autor: Rafael Beraldo.

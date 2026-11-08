@@ -1,0 +1,36 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+% !TEX program = lualatex
+% Radioamadorismo × montanhismo: entidades mundial, nacional, estadual e local.
+% Compilada pelo latexmkrc para img/organizacoes.pdf; a apresentação inclui com \figura{organizacoes}.
+\documentclass[11pt, border=2pt, tikz]{standalone}
+% Acha engine/ compilando da raiz ou de dentro de figuras/
+\makeatletter\def\input@path{{engine/}{../engine/}}\makeatother
+\usepackage{cerj-figuras}
+% Logos em img/logos/ (\orglogo, em cerj-figuras.sty); sem o arquivo, sai o ícone
+\begin{document}
+\begin{tikzpicture}[
+  org/.style={draw=cerjAzul40, fill=cerjAzul10, rounded corners=3pt, inner sep=3pt,
+    minimum height=1cm},
+  nivel/.style={font=\scriptsize, text=cerjAzul60, minimum width=1.5cm},
+  liga/.style={draw=cerjAzul40, dashed},
+  cabecalho/.style={font=\bfseries, text=cerjAzul}]
+  \node[cabecalho] at (-4.3,.8) {\faBroadcastTower\ Radioamadorismo};
+  \node[cabecalho] at ( 4.3,.8) {\faMountain\ Montanhismo};
+
+  \node[org] (ra1) at (-4.3, 0)   {\orgcartao{iaru}{\faGlobeAmericas}{IARU}};
+  \node[org] (ra2) at (-4.3,-1.15) {\orgcartao{labre}{\faFlag}{LABRE}};
+  \node[org] (ra3) at (-4.3,-2.3) {\orgcartao{labre-rj}{\faMapMarker*}{LABRE-RJ}};
+  \node[org] (ra4) at (-4.3,-3.45) {\orgcartao{radioclubes}{\faUsers}{Radioclubes}};
+
+  \node[org] (mo1) at ( 4.3, 0)   {\orgcartao{uiaa}{\faGlobeAmericas}{UIAA}};
+  \node[org] (mo2) at ( 4.3,-1.15) {\orgcartao{cbme}{\faFlag}{CBME}};
+  \node[org] (mo3) at ( 4.3,-2.3) {\orgcartao{feemerj}{\faMapMarker*}{FEEMERJ}};
+  \node[org] (mo4) at ( 4.3,-3.45) {\orgcartao{cerj-logo}{\faUsers}{CERJ}};
+
+  \foreach \i/\nivel in {1/Mundial, 2/Nacional, 3/Estadual, 4/Local} {
+    \node[nivel] (n\i) at (0, {-(\i-1)*1.15}) {\nivel};
+    \draw[liga] (ra\i) -- (n\i) -- (mo\i);
+  }
+\end{tikzpicture}
+\end{document}

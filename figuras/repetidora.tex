@@ -1,0 +1,45 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+% !TEX program = lualatex
+% Como funciona uma repetidora: quem não se enxerga (um montanhista e uma casa
+% com antena) fala pela entrada e ouve
+% pela saída de uma repetidora no alto do morro (frequências da PY1MAC).
+% Compilada pelo latexmkrc para img/repetidora.pdf; a apresentação inclui com \figura{repetidora}.
+\documentclass[11pt, border=2pt, tikz]{standalone}
+% Acha engine/ compilando da raiz ou de dentro de figuras/
+\makeatletter\def\input@path{{engine/}{../engine/}}\makeatother
+\usepackage{cerj-figuras}
+
+\begin{document}
+\begin{tikzpicture}[scale=.7,
+    rotulo/.style={font=\small, text=cerjInk, align=center},
+    icone/.style={text=cerjAzul, anchor=south, inner sep=1pt}]
+  \useasboundingbox (-6.6,-.4) rectangle (6.6,3.9);
+
+  % Terra e morro
+  \fill[cerjGreen!25] plot[domain=-6.6:6.6, samples=30] (\x, {.2*(1-(\x/6.6)^2)}) -- (6.6,-.5) -- (-6.6,-.5) -- cycle;
+  \fill[cerjGreenDark!55] (-3.2,.15) -- (-1.4,1.5) -- (-.6,1.25) -- (0,2.6) -- (1.1,1.5) -- (3.2,.15) -- cycle;
+
+  % Um montanhista num vale, uma casa com antena no outro e a repetidora no cume
+  \node[icone] (a) at (-5.2,.08) {\faHiking};
+  \node[icone, font=\large] (b) at (5.2,.08) {\faHome};
+  \coordinate (ant) at ([yshift=5mm]b.north);             % ponta da antena
+  \draw[cerjAzul, line width=.8pt] (b.north) -- (ant);
+  \foreach \f/\w in {.4/1.9mm, .7/1.4mm, .95/.9mm}       % elementos da antena
+    \draw[cerjAzul, line width=.7pt] ($(b.north)!\f!(ant)$) ++(-\w,0) -- ++(2*\w,0);
+  \node[icone, font=\large] (rep) at (0,2.58) {\faBroadcastTower};
+  \node[rotulo, above=0pt of rep, font=\small\bfseries, text=cerjAzul] {repetidora};
+
+  % Sem visada direta
+  \draw[red!70!black, thick, dashed] (a.north) -- (ant);
+  \node[text=red!70!black, fill=cerjPaper, inner sep=1pt] at (0,.55) {\faTimes};
+
+  % Entrada e saída
+  \draw[cerjBlue, thick, -{Stealth}] (a.north) -- (rep.west)
+    node[rotulo, midway, above left=2pt and -6pt, text=cerjBlue]
+    {\textbf{entrada}\\\freq{144.750}};
+  \draw[cerjGreenDark, thick, -{Stealth}] (rep.east) -- (ant)
+    node[rotulo, midway, above right=2pt and -6pt, text=cerjGreenDark]
+    {\textbf{saída}\\\freq{145.350}};
+\end{tikzpicture}
+\end{document}

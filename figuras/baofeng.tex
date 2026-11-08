@@ -1,0 +1,76 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% Copyright (c) 2026 Rafael Beraldo
+% !TEX program = lualatex
+% Anatomia do Baofeng UV-5R, uma página por slide:
+% 1 visor e knob; 2 botão A/B e as duas linhas do visor; 3 PTT; 4 VFO/MR e o canal no visor.
+% Compilada pelo latexmkrc para img/baofeng.pdf; a apresentação inclui com \figura[page=k]{baofeng}.
+\documentclass[11pt, border=2pt, tikz]{standalone}
+% Acha engine/ compilando da raiz ou de dentro de figuras/
+\makeatletter\def\input@path{{engine/}{../engine/}}\makeatother
+\usepackage{cerj-figuras}
+
+\tikzset{
+  marca/.style={draw=cerjLaranja, line width=1.2pt, rounded corners=2pt},
+  liga/.style={draw=cerjLaranja, line width=.6pt},
+  numero/.style={circle, fill=cerjLaranja, text=white, font=\scriptsize\bfseries,
+    inner sep=0pt, minimum size=4.2mm},
+  rotulo/.style={font=\small, text=cerjInk, anchor=west, align=left},
+}
+
+% Coordenadas das partes em fração da foto (0,0 = canto inferior esquerdo)
+\newcommand{\foto}[1]{%
+  \node[anchor=south west, inner sep=0] (foto) at (0,0)
+    {\includegraphics[height=6cm]{baofeng-#1}};
+  \begin{scope}[x={(foto.south east)}, y={(foto.north west)}]}
+\newcommand{\fimfoto}{\end{scope}}
+
+% \etiqueta{n}{alvo}{y do rótulo}{texto}: número e texto à direita, ligados ao alvo
+\newcommand{\etiqueta}[4]{%
+  \draw[liga] (#2) -- (1.08,#3);
+  \node[numero] at (1.08,#3) {#1};
+  \node[rotulo] at (1.14,#3) {#4};}
+
+\newcommand{\baofeng}[1]{%
+\begin{tikzpicture}
+  % Mesmo tamanho em todas as páginas
+  \useasboundingbox (0,0) rectangle (6.9,6);
+  \ifnum#1<4
+    \foto{vfo}
+      \ifnum#1=1
+        \draw[marca] (.53,.405) rectangle (.81,.487);               % visor
+        \draw[marca] (.775,.52) circle[x radius=.06, y radius=.024]; % knob
+        \etiqueta{1}{.81,.445}{.42}{visor}
+        \etiqueta{2}{.835,.52}{.60}{knob}
+      \fi
+      \ifnum#1=2
+        \draw[marca] (.545,.255) rectangle (.61,.285);              % A/B
+        \draw[marca, line width=.6pt] (.56,.437) rectangle (.76,.454); % linha A
+        \draw[marca, line width=.6pt] (.56,.416) rectangle (.76,.433); % linha B
+        \etiqueta{3}{.61,.27}{.27}{A/B}
+        \draw[liga] (.76,.435) -- (1.08,.47);
+        \node[rotulo] at (1.14,.47) {linhas A e B};
+      \fi
+      \ifnum#1=3
+        % PTT: na lateral esquerda, abaixo do visor (a mão cobre parte dele)
+        \draw[liga, -{Stealth[length=2.4mm]}] (.22,.53) -- (.495,.425);
+        \node[numero] at (.18,.53) {4};
+        \node[rotulo, anchor=south] at (.18,.545) {PTT};
+      \fi
+    \fimfoto
+  \else
+    \foto{mr}
+      \draw[marca] (.488,.330) rectangle (.552,.358);               % VFO/MR
+      \draw[marca] (.50,.40) rectangle (.755,.462);                 % visor com o canal
+      \etiqueta{5}{.552,.344}{.30}{VFO/MR}
+      \draw[liga] (.755,.431) -- (1.08,.50);
+      \node[rotulo] at (1.14,.50) {canal};
+    \fimfoto
+  \fi
+\end{tikzpicture}}
+
+\begin{document}
+\baofeng{1}
+\baofeng{2}
+\baofeng{3}
+\baofeng{4}
+\end{document}

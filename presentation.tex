@@ -27,22 +27,25 @@
 \graphicspath{{img/}}
 
 % --- Metadados --------------------------------------------------------------
-\title[Introdução ao radioamadorismo para montanhistas]{Radioamadorismo para Montanhistas}
-\subtitle{Ou o que fazer quando o celular não funciona}
+\title[Radioamadorismo para montanhistas]{Radioamadorismo para montanhistas}
+\subtitle{Ou o que fazer quando o celular não tem sinal}
 \author{Rafael Beraldo \textperiodcentered\ \indicativo{PU1JAZ}}
 \institute[\CERJ]{Centro Excursionista Rio de Janeiro (\CERJ)}
 \date{12 de novembro de 2026}
 
 % --- Links --------------------------------------------------------------------
 % Todos os endereços da apresentação ficam aqui. Uso:
-%   \href{\linkCERJ}{texto clicável}   texto que abre o endereço
-%   \mostrarlink{\linkCERJ}            o próprio endereço, clicável
+%   \linkexterno{\linkCERJ}{texto}     link nos slides, com o ícone de "abre fora"
+%   \mostrarlink{\linkCERJ}            o próprio endereço, clicável (referências)
 % Em endereços com # ou %, escreva \# e \%.
 \newcommand{\linkCERJ}{https://cerj.org.br}
+\newcommand{\linkCHIRP}{https://chirpmyradio.com}
 \newcommand{\linkAnatelAtoRUG}{https://informacoes.anatel.gov.br/legislacao/component/content/article/96-atos-de-certificacao-de-produtos/2017/1139-ato-14448}
 \newcommand{\linkIARUQueE}{https://www.iaru.org/amateur-radio/what-is-amateur-radio/}
 \newcommand{\linkARRLCemAnos}{https://www.arrl.org/files/file/About\%20ARRL/Ham_Radio_100_Years.pdf}
 \newcommand{\linkManualSalvatti}{https://drive.google.com/file/d/1CFyDpCFN6iQhle8n5S774mZ_Se2v61Kh/view}
+\newcommand{\linkMiniPhysics}{https://www.miniphysics.com/simulations/electromagnetic-spectrum-communication-explorer.html}
+\newcommand{\linkRepeaterBook}{https://www.repeaterbook.com/}
 
 \begin{document}
 
@@ -59,21 +62,448 @@
 \end{frame}
 
 % =============================================================================
-\section{Quem sou eu}
+\section{Uma breve história pessoal}
 % =============================================================================
 
 \begin{frame}{Montanhista e radioamador}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.55\textwidth}
+      \textbf{Sobre mim}
+      \begin{itemize}
+      \item CBM 2026
+      \item Radioamador desde 2022
+      \item Indicativo \indicativo{PU1JAZ}, mas já fui \indicativo{PU2URT}
+      \item Tirei a licença depois de uma \alert{situação traumática} na serra do Espinhaço
+      \end{itemize}
+    \column{0.4\textwidth}
+      \foto[height=5.5cm]{rafael-beraldo}{Com meu Retevis RT-3S na Pedra do Gorila, Itirapina, SP}
+  \end{columns}
+\end{frame}
+
+\cerjfullimage{espinhaço}{%
+  \usebeamerfont{frametitle}Serra do Espinhaço, MG\par
+  \small Cemitério do Peixe × Lapinha da Serra, Carnaval de 2022}
+
+% =============================================================================
+\section{O básico do básico}
+% =============================================================================
+
+\begin{frame}{Uma solução simples: a Radiocomunicação de Uso Geral (RUG)}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.55\textwidth}
+      Para comunicação na trilha ou na escalada sem licença, use um \alert{kit de rádios de uso geral} (RUG).
+
+      \vspace{.5em}
+      \begin{uncoverenv}<2->
+        \textbf{Prós}
+        \begin{itemize}
+        \item Kits relativamente baratos (R\$ 200–400)
+        \item Legalizado \citep{anatel2017}
+        \item Resolve o problema
+        \end{itemize}
+      \end{uncoverenv}
+
+      \begin{uncoverenv}<3->
+        \textbf{Contras}
+        \begin{itemize}
+        \item Baixa potência (500\,mW)
+        \item Não há repetidoras
+        \end{itemize}
+      \end{uncoverenv}
+
+    \column{0.4\textwidth}
+      % Sem especificação de overlay: visível desde o passo 1
+      \foto[height=5.5cm]{talkabout}{Kit do Talkabout T110br}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[standout]
+  Muito obrigado! Perguntas? \\[.5em] \pause Mas, se quisermos ir além do básico, precisamos nos aprofundar no \alert{radioamadorismo}.
+\end{frame}
+
+% =============================================================================
+\section{O espectro eletromagnético}
+% =============================================================================
+
+\begin{frame}{Tudo é onda eletromagnética}
+  \centering
+
+    \foto[width=0.85\linewidth]{espectro-simulacao}{Rádio, micro-ondas, luz e raios X: a mesma onda, em frequências
+    diferentes. Experimente:
+    \linkexterno{\linkMiniPhysics}{Mini Physics, \emph{Electromagnetic spectrum explorer}}}
+\end{frame}
+
+\begin{frame}{Como a Anatel aloca o espectro de rádio brasileiro}
+  \centering
+  \figura{espectro-brasil}
+\end{frame}
+
+% Introdução à propagação (retomada depois com o perfil de uma travessia real).
+\begin{frame}{Propagação: a frequência determina o alcance}
+  \centering
+  \figurapassos{propagacao}{3}
+
+  \medskip
+  \small
+  \begin{tabular}{@{}rl@{}}
+    \textcolor{cerjBlue}{\textbf{HF}} & reflete na ionosfera e pode ir longe, conforme a hora, a estação e o Sol \\
+    \onslide<2->{\textcolor{cerjGreenDark}{\textbf{VHF/UHF}}} & \onslide<2->{não volta: só funciona com \alert{linha de visada}} \\
+  \end{tabular}
+\end{frame}
+
+% =============================================================================
+\section{O radioamadorismo}
+% =============================================================================
+
+\begin{frame}{Radioamadorismo: hobby, ciência e comunidade}
+  \begin{dica}
+    O radioamadorismo é um \alert<1>{hobby científico}, \alert<2>{social} (“primeira rede social”) e \alert<3>{competitivo}, que tem papel importante no \alert<4>{desenvolvimento das telecomunicações} e, eventualmente, na \alert<4>{segurança civil}. \alert<5>{Radioamadores} são pessoas \alert<5>{licenciadas para usar e experimentar} com certas partes do espectro eletromagnético.
+
+    \raggedleft
+    \small
+    \smallskip
+    Com base em \citet{iaru2020}
+  \end{dica}
+\end{frame}
+
+\begin{frame}{As origens do radioamadorismo}
+  \begin{columns}
+    \column{.45\textwidth}
+    \begin{itemize}[<+->]
+    \item 1909, EUA: \alert<1>{Junior Wireless Club}
+    \item 1912, EUA: Promulgação do \alert<2>{Radio Act}
+    \item 1914, EUA: Fundação da \alert<3>{ARRL}
+    \item 1924, Brasil: \alert<4>{Regulamentação do rádio} e radioamadorismo, 5 de novembro
+    \item 1925, Paris: fundação da \alert<5>{IARU}
+    \item 1934: Fundação da \alert<6>{LABRE}
+    \end{itemize}
+
+    \column{.45\textwidth}
+    \foto{antenna1}{Detalhe da capa do número 1, ano 1 da revista \emph{Antenna}, 1926}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Radioamadorismo: um hobby organizado}
+  O radioamadorismo, assim como o montanhismo organizado, é \alert{federado}:
+
+  \medskip
+  \centering
+  \figura{organizacoes}
+\end{frame}
+
+% =============================================================================
+\section{O rádio na montanha}
+% =============================================================================
+
+\begin{frame}{Potencialidades e limites do rádio}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \column{0.48\textwidth}
+      \textbf{\textcolor{cerjGreenDark}{O rádio faz}}
+      \setbeamertemplate{itemize item}{\textcolor{cerjGreenDark}{\faCheck}}
+      \begin{itemize}
+      \item Funciona \alert<1>{sem infraestrutura}: dois rádios bastam
+      \item Fala com \alert<2>{todo o grupo de uma vez}, na caminhada e entre cordadas; \alert<3>{não há privacidade}.
+      \item Contato com a base e o mundo, em linha de visada ou via repetidoras
+      \item É imediato: basta apertar e falar
+      \end{itemize}
+    \column{0.48\textwidth}
+      \textbf{\textcolor{red!70!black}{O rádio não faz}}
+      \setbeamertemplate{itemize item}{\textcolor{red!70!black}{\faTimes}}
+      \begin{itemize}
+      \item Não garante que \alert<4>{alguém esteja ouvindo}
+      \item Não vence o relevo
+      \item Não resolve áreas muito remotas (ex.: PN das Sempre-Vivas)
+      \item Não substitui o \alert<5>{comunicador satelital} nem as chamadas de \alert<6>{emergência do celular}
+      \item Não funciona sem \alert<7>{preparo} ou licença
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Rádio, celular ou comunicador satelital?}
+  % \destaque: cor e negrito (o \alert desalinha dentro da tabela)
+  \newcommand{\destaque}[1]{\textcolor{cerjGreenDark}{\textbf{#1}}}
+  \centering
+  \small
+  \renewcommand{\arraystretch}{1.3}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}lllll@{}}
+    \toprule
+    & \textbf{Celular} & \textbf{Rádio simplex} & \textbf{Via repetidora} & \textbf{Satélite} \\[1ex]
+    Infraestrutura      & operadora       & \destaque{nenhuma}      & repetidora    & é complicado \\ \pause
+    Fala com o grupo    & um por vez      & \destaque{todos juntos} & todos juntos  & só mensagens \\ \pause
+    Alcance             & onde há sinal   & linha de visada         & dezenas de km & global \\ \pause
+    Escuta garantida?   & sim (190, 193) & não                     & não           & central 24\,h \\ \pause
+    Custo               & já se tem       & baixo                   & baixo         & alto + plano \\
+    \bottomrule
+  \end{tabular}
+
+  \raggedright
+  \bigskip
+  \normalsize
+  \pause
+  O rádio é a melhor ferramenta para \alert<5->{coordenar o grupo}. Para pedir socorro, ele \alert<6>{soma}, mas nunca substitui.
+\end{frame}
+
+\cerjfullimage{PN-Sempre-Vivas}{%
+  \usebeamerfont{frametitle}Parque Nacional das Sempre-Vivas, MG, abril de 2022}
+
+% Estudo de alcance: gerado por tools/sempre_vivas.py (relevo Copernicus + RepeaterBook)
+\begin{frame}{Estudo de alcance: o rádio teria ajudado?}
+  \centering
+  \includegraphics{sempre-vivas-alcance}   % já sai do tamanho da área do slide
+\end{frame}
+
+% --- O rádio portátil (HT): anotações em figuras/baofeng.tex, uma página por slide
+\begin{frame}{Conhecendo os equipamentos básicos}
+  \begin{columns}[c,onlytextwidth]
+    \column{0.42\textwidth}
+      \centering
+      \includegraphics[height=6cm]{baofeng-vfo}
+    \column{0.55\textwidth}
+      \textbf{O rádio portátil (HT)}, aqui um Baofeng UV-5R
+      \begin{itemize}
+      \item \alert{Dual-band}: 2\,m (VHF) e 70\,cm (UHF)
+      \item Peso: cerca de 210\,g, com bateria e antena
+      \item Preço: cerca de R\$ 100
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Anatomia do rádio}
+  \begin{columns}[c,onlytextwidth]
+    \column{0.52\textwidth}
+      \figura[page=1]{baofeng}
+    \column{0.46\textwidth}
+      \small
+      \begin{enumerate}
+      \item \textbf{Visor}: mostra a frequência ou o canal
+      \item \textbf{Knob}: liga, desliga e ajusta o volume
+      \end{enumerate}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Duas linhas do visor: A e B}
+  \begin{columns}[c,onlytextwidth]
+    \column{0.52\textwidth}
+      \figura[page=2]{baofeng}
+    \column{0.46\textwidth}
+      \small
+      \begin{itemize}
+      \item O rádio está \alert{sempre ouvindo} as duas linhas
+      \item O botão \textbf{A/B} escolhe por qual linha você transmite
+      \item A seta no visor mostra a linha ativa
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{PTT: aperte para falar}
+  \begin{columns}[c,onlytextwidth]
+    \column{0.52\textwidth}
+    \figura[page=3]{baofeng}
+    \column{0.46\textwidth}
+    \small
+    \begin{itemize}
+    \item Aperte, espere um segundo, fale a um palmo do rádio e solte
+    \item Enquanto você fala, você \alert{não ouve} ninguém
+    \item O rádio fala com \alert{todos ao seu alcance}: não há privacidade\asterisco % a criptografia é crime
+    \end{itemize}
+
+    \bigskip\raggedleft
+    \comentario{O subtom controla apenas o squelch e não torna uma transmissão privada; além disso, a criptografia é crime.}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Memória: VFO e MR}
+  \begin{columns}[c,onlytextwidth]
+    \column{0.52\textwidth}
+      \figura[page=4]{baofeng}
+    \column{0.46\textwidth}
+      \small
+      \begin{itemize}
+      \item \textbf{VFO}: você digita a frequência
+      \item \textbf{MR}: canais salvos na memória, com nome
+      \item O botão \textbf{VFO/MR} alterna entre os dois
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Antenas e programação}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.48\textwidth}
+      \textbf{Antenas}
+      \begin{itemize}
+      \item Primeiro upgrade; a “rubber ducky” original é um elo fraco
+      \item J-Pole, dobrável, direcional (yagi ou log-periódica)
+      \item Transmissão na vertical e o mais alto possível
+      \item Nunca transmita sem antenas
+      \end{itemize}
+    \column{0.48\textwidth}
+      \textbf{Programação com o CHIRP}
+      \begin{itemize}
+      \item Gratuito e aberto: \linkexterno{\linkCHIRP}{chirpmyradio.com}
+      \item Programação de canais e de opções do rádio
+      \item Sincronia entre rádios do mesmo grupo
+      \item Cabo USB com conector K1
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Algumas dicas antes de sair de casa}
+  \small
+  \begin{dica}
+    Transporte o rádio \alert{sem a bateria encaixada}: o knob gira na mochila, o rádio liga e
+    chega descarregado. Já aconteceu.
+  \end{dica}
+
+  \pause
+  \begin{dica}
+    Fique atento ao \alert{squelch} (SQL): silencia o chiado quando ninguém fala; alto demais, corta sinais fracos. O subtom (CTCSS) \alert{não dá privacidade}: só faz o squelch abrir quando o sinal traz aquele tom.
+  \end{dica}
+
+  \pause
+  \begin{regulamento}
+    Rádios como o UV-5R transmitem nas faixas de radioamador: usá-los exige \alert{COER e licença} com indicativo. Eles não são rádios de uso geral (RUG).
+  \end{regulamento}
+\end{frame}
+
+\begin{frame}{Comunicação entre o grupo ou a cordada}
+  \textbf{Simplex}: comunicação direta, na mesma frequência, sem repetidora. Só funciona se houver \alert{linha de visada} entre os dois rádios.
+
+  \medskip
+  \begin{itemize}
+  \item Os rádios vão \alert{nas pontas}: com quem abre e com quem cerra a fila
+  \item Se o grupo se dividir, cada parte leva um rádio
+  \item Todos na \alert{na mesma frequência}, combinada antes de sair e gravado na memória
+  \end{itemize}
+
+  \medskip
+  \begin{atencao}
+    Dois rádios lado a lado são inúteis: quem está junto conversa sem rádio.
+  \end{atencao}
+\end{frame}
+
+\begin{frame}{Comunicação com o mundo}
+  \textbf{Frequência Nacional de Chamada (FNC)}: \alert<1>{\freq{146,520}, em simplex}. Chame, estabeleça contato e mude de frequência; fique sempre ouvindo, para casos de emergência.
+
+  \pause
+  \medskip
+  \textbf{Repetidora}: fica no alto de um morro, recebe na \alert{entrada} e retransmite na
+  \alert{saída}. Assim, quem não se enxerga consegue conversar.
+
+  \smallskip
+  \centering
+  \figura{repetidora}
+\end{frame}
+
+\cerjfullimage{PN-Sempre-Vivas}{%
+  \usebeamerfont{frametitle} TODO: Foto do Caledônia\par
+  \small Atribuição da foto}
+
+\begin{frame}{Exemplos de repetidoras para o PE Três Picos}
+  \centering
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{@{}lll@{}}
+    \toprule
+                           & \textbf{PY1MAC }   & \textbf{PY1ABA} \\[1ex]
+    Local                  & Pico da Caledônia* & Médio Caledônia* \\
+    Saída (você ouve)      & \freq{145.350}     & \freq{147.030} \\
+    Entrada (você fala)    & \freq{144.750}     & \freq{147.630} \\
+    Deslocamento (offset)  & \freq{-0.6}        & \freq{+0.6} \\
+    Subtom                 & nenhum             & \qty{88.5}{\hertz} \\
+    \bottomrule
+  \end{tabular}
+
+  \medskip
+  \raggedright
+  \begin{itemize}
+  \item Você \alert{ouve na saída} e \alert{fala na entrada}: o rádio troca sozinho, pelo offset
+  \item O \alert{subtom} vai junto com a sua voz; sem ele, a PY1ABA não abre
+  \end{itemize}
+  \vfill\raggedleft
+  \comentario{Fonte: RepeaterBook; localização de PY1MAC inferida; PY1ABA no Médio Caledônia segundo listas da LABRE-RJ.}
+\end{frame}
+
+% Estudo de alcance: gerado por tools/caledonia.py (relevo Copernicus, picos do OpenStreetMap)
+\begin{frame}{Até onde chega a PY1MAC?}
+  \centering
+  \includegraphics{caledonia-alcance}
+\end{frame}
+
+\begin{frame}{Como encontrar repetidoras}
+  \begin{columns}
+    \column{0.35\textwidth}
+    Repetidoras podem ser encontradas no site ou no aplicativo Repeater Book: \linkexterno{\linkRepeaterBook}{repeaterbook.com}.
+
+    \column{0.65\textwidth}
+    \foto[height=5cm]{Repeater-Book-RJ}{O Repeater Book permite a descoberta, o cadastro e a atualização de repetidoras. O site também exporta listas prontas para o CHIRP. Na imagem, vê-se a \indicativo{PY1LAG}, repetidora em Teresópolis, RJ.}
+  \end{columns}
+\end{frame}
+
+% Protocolo de Áreas Remotas, com base em Salvatti (2024, seção 8.3)
+\begin{frame}{Protocolo de operação em áreas remotas}
+  \begin{atencao}
+   \alert{Conheça o seu equipamento} antes de precisar dele!
+  \end{atencao}
+
+  \pause
+  Para poupar bateria numa emergência, ligue o rádio só quando há mais chance de alguém ouvir
+  \citep{salvatti2024}:
+
+  \medskip
+  \begin{enumerate}
+  \item Se puder, suba ao ponto mais alto, numa clareira ou com o horizonte desobstruído
+  \item Sintonize a FNC, \freq{146,520}, ou o canal 9 da RUG, \freq{462,6625}; melhor ainda se houver uma repetidora ao alcance
+  \item Ligue o rádio nas \alert{horas cheias}, escute por pelo menos 15 minutos e desligue
+  \end{enumerate}
+
+  \medskip
+  \comentario{Os 15 minutos são o pior caso: com bateria extra ou power bank, dá para escutar por dias.}
+\end{frame}
+
+\begin{frame}{Protocolo de áreas remotas: pedido de socorro}
+  \begin{enumerate}
+  \setcounter{enumi}{4}
+  \item Para pedir socorro, diga:
+  \end{enumerate}
+
+  \begin{alertblock}{Pedido de socorro}
+    \centering
+    ``\textbf{Preciso de ajuda}, este é \textit{\textless identificação\textgreater}, minha
+    localização é \textit{\textless geolocalização\textgreater}.''
+  \end{alertblock}
+
+  \begin{enumerate}
+  \setcounter{enumi}{5}
+  \item Aguarde a resposta
+  \item Para interromper uma conversa, diga ``\alert{break}'' três vezes
+  \end{enumerate}
+
+  \begin{atencao}
+    Jamais diga ``break'' fora de uma emergência
+    (ITU, 2010, p.~23, apud \citealp{salvatti2024}).
+  \end{atencao}
+\end{frame}
+
+
+\begin{frame}{Radioetiqueta e radioética básicas}
 
 \end{frame}
 
-\begin{frame}{Exemplo de situação na montanha}
+\begin{frame}{Diversões}
+
+  - sota
+  - pota
+  - aprs
+  - Satélites (ISS)
 
 \end{frame}
 
 
 % =============================================================================
-\section{Por que rádio na montanha?}
+\section{Como se tornar um radioamador}
 % =============================================================================
+
 
 % --- Lista com revelação progressiva ----------------------------------------
 \begin{frame}{Quando o celular não ajuda}
@@ -176,27 +606,6 @@
   Sem sinal de celular? \\ Sem problema.
 \end{frame}
 
-% =============================================================================
-\section{Na prática}
-% =============================================================================
-
-\begin{frame}{Equipamento mínimo para a trilha}
-  \begin{columns}[T,onlytextwidth]
-    \column{0.48\textwidth}
-      \begin{itemize}
-        \item Rádio de mão VHF/UHF
-        \item Bateria extra carregada
-        \item Antena telescópica
-      \end{itemize}
-    \column{0.48\textwidth}
-      \begin{itemize}
-        \item Cartão com frequências da região
-        \item Saco estanque
-        \item Fone de ouvido para vento forte
-      \end{itemize}
-  \end{columns}
-\end{frame}
-
 % --- Encerramento -----------------------------------------------------------
 \begin{frame}[standout]
   \cerjlogo[height=2cm]\par
@@ -204,7 +613,7 @@
   Obrigado! \\[0.4em]
   {\small\normalfont
     \faEnvelope\ rberaldo@cabaladada.org \quad
-    \faGlobe\ \href{\linkCERJ}{cerj.org.br} \quad
+    \linkexterno{\linkCERJ}{cerj.org.br} \quad
     \faBroadcastTower\ \indicativo{PU1JAZ}}
 \end{frame}
 
@@ -217,7 +626,7 @@
   \begin{itemize}
     \item Anatel: regulamento do serviço de radioamador
     \item LABRE: plano de bandas e exames
-    \item CERJ: \mostrarlink{\linkCERJ}
+    \item CERJ: \linkexterno{\linkCERJ}{cerj.org.br}
   \end{itemize}
 \end{frame}
 
@@ -241,3 +650,7 @@
 \end{frame}
 
 \end{document}
+
+%%% Local Variables:
+%%% fill-column: 100
+%%% End:
