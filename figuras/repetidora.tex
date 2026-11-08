@@ -13,7 +13,7 @@
 \begin{document}
 \begin{tikzpicture}[scale=.7,
     rotulo/.style={font=\small, text=cerjInk, align=center},
-    icone/.style={text=cerjAzul, anchor=south, inner sep=1pt}]
+    icone/.style={text=cerjNavy, anchor=south, inner sep=1pt}]
   \useasboundingbox (-6.6,-.4) rectangle (6.6,3.9);
 
   % Terra e morro
@@ -24,15 +24,15 @@
   \node[icone] (a) at (-5.2,.08) {\faHiking};
   \node[icone, font=\large] (b) at (5.2,.08) {\faHome};
   \coordinate (ant) at ([yshift=5mm]b.north);             % ponta da antena
-  \draw[cerjAzul, line width=.8pt] (b.north) -- (ant);
+  \draw[cerjNavy, line width=.8pt] (b.north) -- (ant);
   \foreach \f/\w in {.4/1.9mm, .7/1.4mm, .95/.9mm}       % elementos da antena
-    \draw[cerjAzul, line width=.7pt] ($(b.north)!\f!(ant)$) ++(-\w,0) -- ++(2*\w,0);
+    \draw[cerjNavy, line width=.7pt] ($(b.north)!\f!(ant)$) ++(-\w,0) -- ++(2*\w,0);
   \node[icone, font=\large] (rep) at (0,2.58) {\faBroadcastTower};
-  \node[rotulo, above=0pt of rep, font=\small\bfseries, text=cerjAzul] {repetidora};
+  \node[rotulo, above=0pt of rep, font=\small\bfseries, text=cerjNavy] {repetidora};
 
   % Sem visada direta
-  \draw[red!70!black, thick, dashed] (a.north) -- (ant);
-  \node[text=red!70!black, fill=cerjPaper, inner sep=1pt] at (0,.55) {\faTimes};
+  \draw[cerjRed, thick, dashed] (a.north) -- (ant);
+  \node[text=cerjRed, fill=cerjPaper, inner sep=1pt] at (0,.55) {\faTimes};
 
   % Entrada e saída
   \draw[cerjBlue, thick, -{Stealth}] (a.north) -- (rep.west)

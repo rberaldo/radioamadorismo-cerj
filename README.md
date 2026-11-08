@@ -119,20 +119,22 @@ texto usa versões escurecidas.
 
 | Nome | Hex | Origem | Uso |
 |---|---|---|---|
-| `cerjAzul` (= `cerjNavy`) | `#003366` | papel timbrado | fundos da capa, seções e título dos slides |
-| `cerjAzul80` (= `cerjRoyal`) | `#335C85` | papel timbrado | título dos blocos de exemplo |
-| `cerjAzul60` | `#6685A3` | papel timbrado | |
-| `cerjAzul40` | `#99ADC2` | papel timbrado | contornos |
-| `cerjAzul20` | `#CCD6E0` | papel timbrado | texto claro sobre o azul, barra de progresso |
-| `cerjAzul10` | `#E6EBF0` | papel timbrado | fundo dos blocos e da caixa `regulamento` |
+| `cerjNavy` | `#003366` | papel timbrado | fundos da capa, seções e título dos slides |
+| `cerjNavy80` | `#335C85` | papel timbrado | título dos blocos de exemplo |
+| `cerjNavy60` | `#6685A3` | papel timbrado | |
+| `cerjNavy40` | `#99ADC2` | papel timbrado | contornos |
+| `cerjNavy20` | `#CCD6E0` | papel timbrado | texto claro sobre o azul, barra de progresso |
+| `cerjNavy10` | `#E6EBF0` | papel timbrado | fundo dos blocos e da caixa `regulamento` |
 | `cerjBlue` | `#3C4398` | emblema | texto dos blocos de exemplo |
 | `cerjGreen` | `#44AC6A` | emblema | barra de progresso, subtítulo da capa, links nos slides de fundo azul |
 | `cerjGreenVivid` | `#11B255` | emblema | |
 | `cerjYellow` | `#F6EFAB` | emblema | fundo da caixa `atencao` |
 | `cerjGreenDark` | `#338150` | derivada | marcadores, links e citações |
-| `cerjLaranja` | `#B34700` | derivada | `\alert` (complementar do azul, para chamar atenção) |
-| `cerjLaranjaClaro` | `#F5A15A` | derivada | `\alert` nos slides de fundo azul |
+| `cerjOrange` | `#B34700` | derivada | `\alert` (complementar do azul, para chamar atenção) |
+| `cerjOrangeLight` | `#F5A15A` | derivada | `\alert` nos slides de fundo azul |
+| `cerjRed` | `#B32424` | derivada | "não": listas de contras, bloqueio de sinal, sem visada |
 | `cerjInk` | `#001F3D` | derivada | texto |
+| `cerjMuted` | `#647789` | derivada | legendas e comentários |
 | `cerjPaper` | `#FAFAFA` | derivada | fundo dos slides (quase branco, ofusca menos no projetor) |
 
 **Logo.** `img/cerj-logo.png` é o emblema em alta resolução (2858 × 2378 px,

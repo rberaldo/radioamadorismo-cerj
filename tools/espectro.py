@@ -167,7 +167,7 @@ def gerar():
     p(r"  \tikzset{amP/.style={fill=cerjGreenDark},"
       r" amS/.style={fill=cerjGreen!55!cerjPaper},"
       r" rd/.style={fill=cerjBlue!35!cerjPaper},"
-      r" outro/.style={fill=cerjAzul10},"
+      r" outro/.style={fill=cerjNavy10},"
       r" rot/.style={font=\sffamily\tiny, inner sep=1pt},"
       r" ham/.style={rot, text=cerjGreenDark, anchor=south}}")
     for i, (nome, ini, intervalo) in enumerate(LINHAS):
@@ -221,7 +221,7 @@ def gerar():
                 p(f"  \\node[rot, text=cerjNavy] at ({meio:.4f},"
                   f"{y + ALTURA / 2:.3f}) {{{rotulo}}};")
         # Contorno da barra
-        p(f"  \\draw[cerjAzul40, line width=0.3pt] (0,{y:.3f})"
+        p(f"  \\draw[cerjNavy40, line width=0.3pt] (0,{y:.3f})"
           f" rectangle ({LARGURA},{y + ALTURA:.3f});")
 
     # Legenda

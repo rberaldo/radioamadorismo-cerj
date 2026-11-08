@@ -12,12 +12,12 @@
 \newcommand{\propagacao}[1]{%
   \begin{tikzpicture}[scale=.9,
       rotulo/.style={font=\scriptsize, text=cerjInk},
-      icone/.style={text=cerjAzul, anchor=south, inner sep=1pt}]
+      icone/.style={text=cerjNavy, anchor=south, inner sep=1pt}]
     \useasboundingbox (-6.9,-.45) rectangle (6.9,5.2);
   
     % Ionosfera
-    \fill[cerjAzul10] (-6.9,4.4) rectangle (6.9,4.9);
-    \node[rotulo, text=cerjAzul60, anchor=east] at (6.8,4.65) {ionosfera};
+    \fill[cerjNavy10] (-6.9,4.4) rectangle (6.9,4.9);
+    \node[rotulo, text=cerjNavy60, anchor=east] at (6.8,4.65) {ionosfera};
   
     % Terra (curvatura exagerada) e morro
     \fill[cerjGreen!25] plot[domain=-6.9:6.9, samples=40] (\x, {.35*(1-(\x/6.9)^2)}) -- (6.9,-.45) -- (-6.9,-.45) -- cycle;
@@ -39,8 +39,8 @@
     \ifnum#1>1
       \draw[cerjGreenDark, thick, -{Stealth}] (base.north) -- (-4.4,5.2);
       \node[rotulo, text=cerjGreenDark, font=\scriptsize\bfseries, anchor=west] at (-4.35,5.05) {VHF/UHF};
-      \draw[red!70!black, thick, dashed] (m1.north) -- (m2.north);
-      \node[text=red!70!black, fill=cerjPaper, inner sep=1pt, font=\small] at (.75,.75) {\faTimes};
+      \draw[cerjRed, thick, dashed] (m1.north) -- (m2.north);
+      \node[text=cerjRed, fill=cerjPaper, inner sep=1pt, font=\small] at (.75,.75) {\faTimes};
     \fi
   
     % 3. Quem está no cume enxerga os dois lados

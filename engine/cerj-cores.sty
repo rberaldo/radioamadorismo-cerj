@@ -1,8 +1,9 @@
 % SPDX-License-Identifier: CC-BY-SA-4.0
 % Copyright (c) 2026 Rafael Beraldo
 %% cerj-cores.sty
-%% Paleta CERJ. Usada pelo tema (beamerthemecerj.sty) e pelas figuras
-%% compiladas à parte (classe standalone), para que tudo tenha as mesmas cores.
+%% Paleta CERJ. Usada pelo tema (beamerthemecerj.sty), pelas figuras TikZ
+%% (cerj-figura.cls) e pelos gráficos em Python (tools/estilo.py lê as linhas
+%% \definecolor deste arquivo), para que tudo tenha as mesmas cores.
 %%
 %% Duas fontes:
 %%  - Papel timbrado oficial do CERJ: Azul CERJ #003366 e seus tons misturados
@@ -10,12 +11,12 @@
 %%  - Emblema (img/cerj-logo.png): cores medidas nos pixels.
 %%
 %% Oficiais (papel timbrado)
-%%   cerjAzul      #003366  Azul CERJ, azul institucional
-%%   cerjAzul80    #335C85  azul médio
-%%   cerjAzul60    #6685A3  azul médio-claro
-%%   cerjAzul40    #99ADC2  azul claro
-%%   cerjAzul20    #CCD6E0  azul muito claro
-%%   cerjAzul10    #E6EBF0  azul quase branco
+%%   cerjNavy      #003366  Azul CERJ, azul institucional
+%%   cerjNavy80    #335C85  azul médio
+%%   cerjNavy60    #6685A3  azul médio-claro
+%%   cerjNavy40    #99ADC2  azul claro
+%%   cerjNavy20    #CCD6E0  azul muito claro
+%%   cerjNavy10    #E6EBF0  azul quase branco
 %% Do emblema
 %%   cerjBlue      #3C4398  azul do emblema (anel, letras, montanha)
 %%   cerjGreen     #44AC6A  verde do emblema (vegetação)
@@ -23,31 +24,32 @@
 %%   cerjYellow    #F6EFAB  creme do emblema (anel interno, nó)
 %% Derivadas, para leitura (contraste de texto sobre branco entre parênteses)
 %%   cerjGreenDark #338150  verde do emblema escurecido, para texto e links (4,6:1)
-%%   cerjLaranja   #B34700  destaque (\alert): complementar do Azul CERJ, salta
+%%   cerjOrange    #B34700  destaque (\alert): complementar do Azul CERJ, salta
 %%                          sobre o texto azul e os elementos verdes (5,3:1)
-%%   cerjLaranjaClaro #F5A15A  \alert sobre fundo azul, nos slides standout
+%%   cerjOrangeLight #F5A15A  \alert sobre fundo azul, nos slides standout
 %%                          (6,1:1 sobre o Azul CERJ)
+%%   cerjRed       #B32424  "não", bloqueio, sem visada (6,3:1)
 %%   cerjInk       #001F3D  Azul CERJ escurecido, texto corrido (16,6:1)
+%%   cerjMuted     #647789  texto discreto: legendas e comentários (4,6:1)
 %%   cerjPaper     #FAFAFA  fundo dos slides: quase branco, ofusca menos no
 %%                          projetor que o branco puro do papel timbrado
-%% Nomes usados pelo tema
-%%   cerjNavy  = cerjAzul    fundos escuros (título, seções, barra do título)
-%%   cerjRoyal = cerjAzul80  preenchimentos médios
 %%
 %% O verde e o creme do emblema são claros demais para texto sobre branco
 %% (2,9:1 e 1,2:1); sobre o Azul CERJ funcionam bem (4,4:1 e 10,7:1).
+%%
+%% Só \definecolor com HTML aqui: é o que tools/estilo.py sabe ler.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{cerj-cores}[2026/11/07 v0.2 Paleta CERJ]
+\ProvidesPackage{cerj-cores}[2026/11/08 v0.3 Paleta CERJ]
 
 \RequirePackage{xcolor}
 
 % Oficiais (papel timbrado)
-\definecolor{cerjAzul}{HTML}{003366}
-\definecolor{cerjAzul80}{HTML}{335C85}
-\definecolor{cerjAzul60}{HTML}{6685A3}
-\definecolor{cerjAzul40}{HTML}{99ADC2}
-\definecolor{cerjAzul20}{HTML}{CCD6E0}
-\definecolor{cerjAzul10}{HTML}{E6EBF0}
+\definecolor{cerjNavy}{HTML}{003366}
+\definecolor{cerjNavy80}{HTML}{335C85}
+\definecolor{cerjNavy60}{HTML}{6685A3}
+\definecolor{cerjNavy40}{HTML}{99ADC2}
+\definecolor{cerjNavy20}{HTML}{CCD6E0}
+\definecolor{cerjNavy10}{HTML}{E6EBF0}
 
 % Do emblema
 \definecolor{cerjBlue}{HTML}{3C4398}
@@ -57,13 +59,11 @@
 
 % Derivadas
 \definecolor{cerjGreenDark}{HTML}{338150}
-\definecolor{cerjLaranja}{HTML}{B34700}
-\definecolor{cerjLaranjaClaro}{HTML}{F5A15A}
+\definecolor{cerjOrange}{HTML}{B34700}
+\definecolor{cerjOrangeLight}{HTML}{F5A15A}
+\definecolor{cerjRed}{HTML}{B32424}
 \definecolor{cerjInk}{HTML}{001F3D}
+\definecolor{cerjMuted}{HTML}{647789}
 \definecolor{cerjPaper}{HTML}{FAFAFA}
-
-% Nomes usados pelo tema
-\colorlet{cerjNavy}{cerjAzul}
-\colorlet{cerjRoyal}{cerjAzul80}
 
 \endinput
