@@ -173,4 +173,26 @@ Pelo mesmo motivo, os logos em `img/logos/` (IARU, LABRE, LABRE-RJ, UIAA,
 CBME e FEEMERJ) são marcas das respectivas organizações, usados apenas para
 identificá-las, e também ficam fora da licença CC BY-SA.
 
+### Conteúdo de terceiros
+
+Também ficam fora da licença CC BY-SA, com os direitos de seus autores:
+
+| Arquivo | Origem |
+|---|---|
+| `img/caledonia-William.jpeg` | foto de William de Abreu, usada com permissão |
+| `img/talkabout.png` | anúncio do kit Motorola Talkabout T110br |
+| `img/Repeater-Book-RJ.png` | captura de tela do [RepeaterBook](https://www.repeaterbook.com) |
+| `img/espectro-simulacao.png` | captura de tela do simulador da [Mini Physics](https://www.miniphysics.com) |
+| `img/antenna1.png` | detalhe da capa da revista *Antenna*, n. 1, 1926 |
+
+Os dados usados pelas figuras de `tools/` têm licença própria:
+
+- Relevo (`sempre-vivas-alcance.pdf`, `caledonia-alcance.pdf`): Copernicus DEM
+  GLO-30, © DLR e.V. 2010–2014 e © Airbus Defence and Space GmbH 2014–2018,
+  fornecido no âmbito do COPERNICUS pela União Europeia e pela ESA.
+- Coordenadas dos picos: © colaboradores do OpenStreetMap, licença ODbL.
+- Repetidoras: [RepeaterBook](https://www.repeaterbook.com), três registros
+  consultados à mão, com o link de cada um em `tools/sempre_vivas.py`.
+- Espectro (`espectro-brasil.pdf`): PDFF da Anatel, dado público.
+
 Autor: Rafael Beraldo.

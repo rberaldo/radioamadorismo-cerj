@@ -23,7 +23,7 @@ ensure_path('TEXINPUTS', './engine//');
 # Roda a cada `latexmk` e, no -pvc, antes de cada recompilação: como \figura
 # registra figuras/X.tex como dependência da apresentação, salvar uma figura
 # já dispara o -pvc.
-use File::Copy qw(copy);
+use File::Copy qw(copy move);
 use File::Path qw(make_path);
 
 sub compilar_figuras {
@@ -39,7 +39,9 @@ sub compilar_figuras {
         # batchmode: nada no terminal; erros ficam em build/figuras/$nome.log
         if (system('lualatex', '-interaction=batchmode', '-halt-on-error',
                    '-output-directory=build/figuras', $fonte) == 0) {
-            copy("build/figuras/$nome.pdf", $pdf);
+            # Copia para um temporário e renomeia (atômico): outro latexmk rodando ao
+            # mesmo tempo, como um -pvc, nunca lê o PDF pela metade
+            copy("build/figuras/$nome.pdf", "$pdf.tmp") and move("$pdf.tmp", $pdf);
         } else {
             warn "Falha ao compilar $fonte (veja build/figuras/$nome.log)\n";
         }
