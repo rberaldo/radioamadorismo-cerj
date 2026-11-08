@@ -89,7 +89,7 @@ Macros de texto:
 - `\freq{146.520}` imprime 146,520 MHz e `\freqrange{144}{148}` imprime
   144 a 148 MHz.
 - `\indicativo{PY1XXX}` imprime um indicativo de chamada em monoespaçado.
-- `\alert{termo}` destaca um termo em verde e negrito (o `\alert` do Beamer,
+- `\alert{termo}` destaca um termo em laranja e negrito (o `\alert` do Beamer,
   ajustado pelo tema).
 - `\foto{arquivo}{legenda}` põe uma foto na largura da coluna com a legenda
   embaixo. Aceita opções do `\includegraphics` (`\foto[height=4cm]{...}{...}`);
@@ -117,7 +117,9 @@ texto usa versões escurecidas.
 | `cerjGreen` | `#44AC6A` | emblema | barra de progresso, subtítulo da capa, links nos slides de fundo azul |
 | `cerjGreenVivid` | `#11B255` | emblema | |
 | `cerjYellow` | `#F6EFAB` | emblema | fundo da caixa `atencao` |
-| `cerjGreenDark` | `#338150` | derivada | marcadores, `\alert`, links e citações |
+| `cerjGreenDark` | `#338150` | derivada | marcadores, links e citações |
+| `cerjLaranja` | `#B34700` | derivada | `\alert` (complementar do azul, para chamar atenção) |
+| `cerjLaranjaClaro` | `#F5A15A` | derivada | `\alert` nos slides de fundo azul |
 | `cerjInk` | `#001F3D` | derivada | texto |
 | `cerjPaper` | `#FAFAFA` | derivada | fundo dos slides (quase branco, ofusca menos no projetor) |
 

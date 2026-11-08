@@ -31,8 +31,8 @@
 
 % Texto e estrutura
 \setbeamercolor{normal text}{fg=cerjInk, bg=cerjPaper}
-\setbeamercolor{alerted text}{fg=cerjGreenDark}
-\setbeamerfont{alerted text}{series=\bfseries}   % \alert: verde e negrito
+\setbeamercolor{alerted text}{fg=cerjLaranja}
+\setbeamerfont{alerted text}{series=\bfseries}   % \alert: laranja e negrito
 \setbeamercolor{example text}{fg=cerjBlue}
 \setbeamercolor{structure}{fg=cerjNavy}
 \setbeamercolor{palette primary}{fg=white, bg=cerjNavy}   % usado por [standout]
@@ -67,10 +67,12 @@
 \setbeamercolor{subsection title}{fg=cerjAzul20}
 
 % Links: verde escuro sobre o fundo claro; nos slides [standout] (fundo azul),
-% o verde claro do emblema, que o verde escuro ficaria ilegível. O \hypersetup
-% vale só dentro do grupo que o metropolis abre para o standout.
+% o verde claro do emblema, que o verde escuro ficaria ilegível. Ali o \alert
+% também troca para o laranja claro. As duas trocas valem só dentro do grupo
+% que o metropolis abre para o standout.
 \hypersetup{colorlinks=true, linkcolor=., urlcolor=cerjGreenDark, citecolor=cerjGreenDark}
-\apptocmd{\KV@beamerframe@standout}{\hypersetup{urlcolor=cerjGreen, citecolor=cerjGreen}}{}%
+\apptocmd{\KV@beamerframe@standout}{\hypersetup{urlcolor=cerjGreen, citecolor=cerjGreen}%
+  \setbeamercolor{alerted text}{fg=cerjLaranjaClaro}}{}%
   {\PackageWarning{beamerthemecerj}{Não deu para ajustar a cor dos links no standout}}
 
 % ---------------------------------------------------------------------------
